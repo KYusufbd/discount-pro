@@ -1,2 +1,70 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+@plugin "daisyui/theme" {
+    name: "discount-pro-theme";
+    default: false; /* set as default */
+    prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
+    color-scheme: light; /* color of browser-provided UI */
+  
+    /* Light Theme */
+    --color-base-100: #F9FAFB;
+    --color-base-200: #E5E7EB;
+    --color-base-300: #D1D5DB;
+    --color-base-content: #0D1E4C;
+    --color-primary: #0D1E4C;
+    --color-primary-content: #F9FAFB;
+    --color-secondary: #C48CB3;
+    --color-secondary-content: #F9FAFB;
+    --color-accent: #E5C9D7;
+    --color-accent-content: #0D1E4C;
+    --color-neutral: #83A6CE;
+    --color-neutral-content: #0D1E4C;
+    --color-info: #83A6CE;
+    --color-info-content: #F9FAFB;
+    --color-success: #22C55E;
+    --color-success-content: #F9FAFB;
+    --color-warning: #EAB308;
+    --color-warning-content: #0D1E4C;
+    --color-error: #DC2626;
+    --color-error-content: #F9FAFB;
+  
+    /* Dark Theme */
+    --color-base-100: #0B1B32;
+    --color-base-200: #0D1E4C;
+    --color-base-300: #26415E;
+    --color-base-content: #E5C9D7;
+    --color-primary: #C48CB3;
+    --color-primary-content: #0B1B32;
+    --color-secondary: #83A6CE;
+    --color-secondary-content: #0B1B32;
+    --color-accent: #E5C9D7;
+    --color-accent-content: #0B1B32;
+    --color-neutral: #26415E;
+    --color-neutral-content: #E5C9D7;
+    --color-info: #83A6CE;
+    --color-info-content: #0B1B32;
+    --color-success: #22C55E;
+    --color-success-content: #0B1B32;
+    --color-warning: #EAB308;
+    --color-warning-content: #0B1B32;
+    --color-error: #DC2626;
+    --color-error-content: #0B1B32;
+  
+    /* Border radius */
+    --radius-selector: 1rem;
+    --radius-field: 0.25rem;
+    --radius-box: 0.5rem;
+  
+    /* Base sizes */
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+  
+    /* Border size */
+    --border: 1px;
+  
+    /* Effects */
+    --depth: 1;
+    --noise: 0;
+  };
+  
