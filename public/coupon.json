@@ -1,103 +1,99 @@
-[
-  {
-    "_id": "1",
-    "product_name": "Unstitched Japanese Silk Screen Print Three-Piece",
-    "description": "A high-quality unstitched three-piece suit made from Japanese silk with intricate screen print designs.",
-    "shop_link": "https://ajkerdeal.com/productdetails?id=1",
-    "brand_name": "AjkerDeal",
-    "brand_logo_URL": "https://ajkerdeal.com/logo.png",
-    "category": "Clothing",
-    "rating": 4.5,
-    "coupons": [
-      {
-        "coupon_code": "SILK10",
-        "description": "Get 10% off on all silk products.",
-        "expiry_date": "2025-05-01",
-        "condition": "Minimum purchase of $40 required.",
-        "coupon_type": "Percentage Discount"
-      }
-    ],
-    "isSaleOn": true
-  },
-  {
-    "_id": "2",
-    "product_name": "AXON X-136 High-Power Hearing Aid",
-    "description": "A portable amplifier receiver ear care device for individuals with hearing difficulties.",
-    "shop_link": "https://ajkerdeal.com/productdetails?id=2",
-    "brand_name": "AXON",
-    "brand_logo_URL": "https://ajkerdeal.com/axon_logo.png",
-    "category": "Health",
-    "rating": 4.0,
-    "coupons": [
-      {
-        "coupon_code": "HEALTH15",
-        "description": "Save $15 on this high-power hearing aid.",
-        "expiry_date": "2025-06-15",
-        "condition": "Valid for new customers only.",
-        "coupon_type": "Flat Discount"
-      },
-      {
-        "coupon_code": "FREESHIPHEALTH",
-        "description": "Get free shipping on health products over $50.",
-        "expiry_date": "2025-04-30",
-        "condition": "Applies to selected health products.",
-        "coupon_type": "Free Shipping"
-      }
-    ],
-    "isSaleOn": true
-  },
-  {
-    "_id": "3",
-    "product_name": "Microlife BP-3AR1-3P Automatic Blood Pressure Monitor",
-    "description": "An automatic blood pressure monitor with free adapter for accurate health monitoring.",
-    "shop_link": "https://ajkerdeal.com/productdetails?id=3",
-    "brand_name": "Microlife",
-    "brand_logo_URL": "https://ajkerdeal.com/microlife_logo.png",
-    "category": "Health",
-    "rating": 4.7,
-    "coupons": [
-      {
-        "coupon_code": "BP20OFF",
-        "description": "Get $20 off on Microlife Blood Pressure Monitors.",
-        "expiry_date": "2025-07-01",
-        "condition": "Limited stock available.",
-        "coupon_type": "Flat Discount"
-      }
-    ],
-    "isSaleOn": true
-  },
-  {
-    "_id": "4",
-    "product_name": "Electric Pore Cleaner Massager",
-    "description": "A rose gold device designed to remove blackheads, acne, and pimples effectively.",
-    "shop_link": "https://ajkerdeal.com/productdetails?id=4",
-    "brand_name": "BeautyCare",
-    "brand_logo_URL": "https://ajkerdeal.com/beautycare_logo.png",
-    "category": "Beauty",
-    "rating": 4.3,
-    "coupons": [
-      {
-        "coupon_code": "BEAUTY10",
-        "description": "Enjoy 10% off on beauty care devices.",
-        "expiry_date": "2025-08-15",
-        "condition": "Valid for orders above $30.",
-        "coupon_type": "Percentage Discount"
-      },
-      {
-        "coupon_code": "FREESHIPBEAUTY",
-        "description": "Free shipping on beauty products over $40.",
-        "expiry_date": "2025-05-10",
-        "condition": "Online orders only.",
-        "coupon_type": "Free Shipping"
-      }
-    ],
-    "isSaleOn": true
-  },
+  [
+    {
+      "_id": "1",
+      "description": "Exclusive offer! Get 10% off on this premium unstitched Japanese silk three-piece suit with screen print designs.",
+      "shop_link": "https://ajkerdeal.com",
+      "brand_name": "AjkerDeal",
+      "brand_logo_URL": "https://ajkerdeal.com/logo.png",
+      "category": "Clothing",
+      "rating": 4.5,
+      "coupons": [
+        {
+          "coupon_code": "SILK10",
+          "description": "Get 10% off on all silk products.",
+          "expiry_date": "2025-05-01",
+          "condition": "Minimum purchase of $40 required.",
+          "coupon_type": "Percentage Discount"
+        }
+      ],
+      "isSaleOn": true
+    },
+    {
+      "_id": "2",
+      "description": "Limited-time deal! Save $15 on the AXON X-136 High-Power Hearing Aid for enhanced hearing support.",
+      "shop_link": "https://ajkerdeal.com",
+      "brand_name": "AXON",
+      "brand_logo_URL": "https://ajkerdeal.com/axon_logo.png",
+      "category": "Health",
+      "rating": 4.0,
+      "coupons": [
+        {
+          "coupon_code": "HEALTH15",
+          "description": "Save $15 on this high-power hearing aid.",
+          "expiry_date": "2025-06-15",
+          "condition": "Valid for new customers only.",
+          "coupon_type": "Flat Discount"
+        },
+        {
+          "coupon_code": "FREESHIPHEALTH",
+          "description": "Get free shipping on health products over $50.",
+          "expiry_date": "2025-04-30",
+          "condition": "Applies to selected health products.",
+          "coupon_type": "Free Shipping"
+        }
+      ],
+      "isSaleOn": true
+    },
+    {
+      "_id": "3",
+      "description": "Special offer! Get $20 off on the Microlife BP-3AR1-3P Automatic Blood Pressure Monitor with free adapter.",
+      "shop_link": "https://ajkerdeal.com",
+      "brand_name": "Microlife",
+      "brand_logo_URL": "https://ajkerdeal.com/microlife_logo.png",
+      "category": "Health",
+      "rating": 4.7,
+      "coupons": [
+        {
+          "coupon_code": "BP20OFF",
+          "description": "Get $20 off on Microlife Blood Pressure Monitors.",
+          "expiry_date": "2025-07-01",
+          "condition": "Limited stock available.",
+          "coupon_type": "Flat Discount"
+        }
+      ],
+      "isSaleOn": true
+    },
+    {
+      "_id": "4",
+      "description": "Exclusive deal! Enjoy 10% off on this Electric Pore Cleaner Massager for clear and smooth skin.",
+      "shop_link": "https://ajkerdeal.com",
+      "brand_name": "BeautyCare",
+      "brand_logo_URL": "https://ajkerdeal.com/beautycare_logo.png",
+      "category": "Beauty",
+      "rating": 4.3,
+      "coupons": [
+        {
+          "coupon_code": "BEAUTY10",
+          "description": "Enjoy 10% off on beauty care devices.",
+          "expiry_date": "2025-08-15",
+          "condition": "Valid for orders above $30.",
+          "coupon_type": "Percentage Discount"
+        },
+        {
+          "coupon_code": "FREESHIPBEAUTY",
+          "description": "Free shipping on beauty products over $40.",
+          "expiry_date": "2025-05-10",
+          "condition": "Online orders only.",
+          "coupon_type": "Free Shipping"
+        }
+      ],
+      "isSaleOn": true
+    },
+  
   {
     "_id": "5",
-    "product_name": "Gluco Check Active Diabetes Test Strips",
-    "description": "Pack of 25 blood glucose test strips for monitoring diabetes.",
-    "shop_link": "https://ajkerdeal.com/productdetails?id=5",
+    "description": "Limited-time offer! Get 10% off on Gluco Check Active Diabetes Test Strips for monitoring diabetes.",
+    "shop_link": "https://ajkerdeal.com",
     "brand_name": "Gluco Check",
     "brand_logo_URL": "https://ajkerdeal.com/glucocheck_logo.png",
     "category": "Health",
@@ -115,9 +111,8 @@
   },
   {
     "_id": "6",
-    "product_name": "Digital Therapy Machine with Lighting Display",
-    "description": "A digital therapy machine with 4 pads, voice guidance, and lighting display for pain relief.",
-    "shop_link": "https://ajkerdeal.com/productdetails?id=6",
+    "description": "Exclusive deal! Save up to 20% on this Digital Therapy Machine with voice guidance and lighting display.",
+    "shop_link": "https://ajkerdeal.com",
     "brand_name": "TherapyPro",
     "brand_logo_URL": "https://ajkerdeal.com/therapypro_logo.png",
     "category": "Health",
@@ -142,9 +137,8 @@
   },
   {
     "_id": "7",
-    "product_name": "Unstitched Block Printed Cotton Salwar Kameez",
-    "description": "Light green unstitched block printed cotton salwar kameez for women.",
-    "shop_link": "https://ajkerdeal.com/productdetails?id=7",
+    "description": "Special discount! Get 20% off on this stylish unstitched block printed cotton salwar kameez.",
+    "shop_link": "https://ajkerdeal.com",
     "brand_name": "FashionHouse",
     "brand_logo_URL": "https://ajkerdeal.com/fashionhouse_logo.png",
     "category": "Clothing",
@@ -162,9 +156,8 @@
   },
   {
     "_id": "8",
-    "product_name": "Hand Mixer Cappuccino Coffee Maker",
-    "description": "A handheld mixer designed for making cappuccino and other coffee beverages.",
-    "shop_link": "https://ajkerdeal.com/productdetails?id=8",
+    "description": "Limited-time deal! Save up to 10% on this Hand Mixer Cappuccino Coffee Maker.",
+    "shop_link": "https://ajkerdeal.com",
     "brand_name": "KitchenPro",
     "brand_logo_URL": "https://ajkerdeal.com/kitchenpro_logo.png",
     "category": "Home Appliances",
@@ -189,9 +182,8 @@
   },
   {
     "_id": "9",
-    "product_name": "Heavy Embroidery Semi-Stitched Anarkali Gown",
-    "description": "A semi-stitched Anarkali gown with heavy embroidery, perfect for special occasions.",
-    "shop_link": "https://ajkerdeal.com/productdetails?id=9",
+    "description": "Limited-time offer! Get 15% off on this elegant Anarkali gown, perfect for special occasions.",
+    "shop_link": "https://ajkerdeal.com",
     "brand_name": "EthnicWear",
     "brand_logo_URL": "https://ajkerdeal.com/ethnicwear_logo.png",
     "category": "Clothing",
@@ -209,9 +201,8 @@
   },
   {
     "_id": "10",
-    "product_name": "Maroon Indian Georgette Saree",
-    "description": "A beautiful maroon georgette saree imported from India.",
-    "shop_link": "https://ajkerdeal.com/productdetails?id=10",
+    "description": "Exclusive discount! Enjoy 10% off on this stunning maroon Indian georgette saree.",
+    "shop_link": "https://ajkerdeal.com",
     "brand_name": "SareeCollection",
     "brand_logo_URL": "https://ajkerdeal.com/sareecollection_logo.png",
     "category": "Clothing",
@@ -229,9 +220,8 @@
   },
   {
     "_id": "11",
-    "product_name": "Black and Golden Georgette Saree",
-    "description": "Elegant black and golden georgette saree suitable for formal events.",
-    "shop_link": "https://ajkerdeal.com/productdetails?id=11",
+    "description": "Special sale! Save 15% on this elegant black and golden georgette saree.",
+    "shop_link": "https://ajkerdeal.com",
     "brand_name": "SareeCollection",
     "brand_logo_URL": "https://ajkerdeal.com/sareecollection_logo.png",
     "category": "Clothing",
@@ -249,9 +239,8 @@
   },
   {
     "_id": "12",
-    "product_name": "Blue Georgette Saree",
-    "description": "A stylish blue georgette saree for casual and formal wear.",
-    "shop_link": "https://ajkerdeal.com/productdetails?id=12",
+    "description": "Don't miss out! Get a flat 10% discount on this stylish blue georgette saree.",
+    "shop_link": "https://ajkerdeal.com",
     "brand_name": "SareeCollection",
     "brand_logo_URL": "https://ajkerdeal.com/sareecollection_logo.png",
     "category": "Clothing",
@@ -269,9 +258,8 @@
   },
   {
     "_id": "13",
-    "product_name": "Samsung Galaxy S23 Ultra",
-    "description": "A flagship smartphone with a 200MP camera, Snapdragon 8 Gen 2, and a 5000mAh battery.",
-    "shop_link": "https://startech.com.bd/productdetails?id=13",
+    "description": "Special launch offer! Get 5% off on this premium flagship smartphone with top-tier features.",
+    "shop_link": "https://startech.com.bd",
     "brand_name": "Samsung",
     "brand_logo_URL": "https://startech.com.bd/samsung_logo.png",
     "category": "Smartphones",
@@ -289,9 +277,8 @@
   },
   {
     "_id": "14",
-    "product_name": "Apple MacBook Air M2",
-    "description": "Lightweight, powerful laptop with Apple M2 chip, 13.6-inch Liquid Retina display, and 18-hour battery life.",
-    "shop_link": "https://startech.com.bd/productdetails?id=14",
+    "description": "Limited-time deal! Save 10,000 BDT on this powerful and lightweight Apple MacBook Air M2.",
+    "shop_link": "https://startech.com.bd",
     "brand_name": "Apple",
     "brand_logo_URL": "https://startech.com.bd/apple_logo.png",
     "category": "Laptops",
@@ -309,9 +296,8 @@
   },
   {
     "_id": "15",
-    "product_name": "Sony WH-1000XM5 Noise Cancelling Headphones",
-    "description": "Industry-leading noise cancellation with exceptional sound quality and 30-hour battery life.",
-    "shop_link": "https://pickaboo.com/productdetails?id=15",
+    "description": "Exclusive discount! Get 20% off on these industry-leading noise-canceling headphones.",
+    "shop_link": "https://pickaboo.com",
     "brand_name": "Sony",
     "brand_logo_URL": "https://pickaboo.com/sony_logo.png",
     "category": "Audio",
@@ -329,9 +315,8 @@
   },
   {
     "_id": "16",
-    "product_name": "Mi 11 Lite 5G",
-    "description": "Ultra-slim 5G smartphone with AMOLED display and Snapdragon 780G processor.",
-    "shop_link": "https://daraz.com.bd/productdetails?id=16",
+    "description": "Special sale! Save 15% on this ultra-slim 5G smartphone with AMOLED display.",
+    "shop_link": "https://daraz.com.bd",
     "brand_name": "Xiaomi",
     "brand_logo_URL": "https://daraz.com.bd/xiaomi_logo.png",
     "category": "Smartphones",
@@ -349,9 +334,8 @@
   },
   {
     "_id": "17",
-    "product_name": "Logitech MX Master 3S Wireless Mouse",
-    "description": "Advanced ergonomic mouse with ultra-fast scrolling and customizable buttons.",
-    "shop_link": "https://clickbd.com/productdetails?id=17",
+    "description": "Limited stock! Get 10% off on this advanced ergonomic wireless mouse.",
+    "shop_link": "https://clickbd.com",
     "brand_name": "Logitech",
     "brand_logo_URL": "https://clickbd.com/logitech_logo.png",
     "category": "Accessories",
@@ -359,7 +343,7 @@
     "coupons": [
       {
         "coupon_code": "LOGI10",
-        "description": "10% off on Logitech MX Master 3S.",
+        "description": "10% off on Logitech MX Master 3S Wireless Mouse.",
         "expiry_date": "2025-07-01",
         "condition": "Valid for first 200 customers.",
         "coupon_type": "Percentage"
@@ -369,9 +353,8 @@
   },
   {
     "_id": "18",
-    "product_name": "Asus ROG Strix G16 Gaming Laptop",
-    "description": "High-performance gaming laptop with Intel Core i9 processor and RTX 4060 GPU.",
-    "shop_link": "https://startech.com.bd/productdetails?id=18",
+    "description": "Special gaming deal! Get 5000 BDT off on this high-performance gaming laptop.",
+    "shop_link": "https://startech.com.bd",
     "brand_name": "Asus",
     "brand_logo_URL": "https://startech.com.bd/asus_logo.png",
     "category": "Laptops",
@@ -379,7 +362,7 @@
     "coupons": [
       {
         "coupon_code": "ROG5000",
-        "description": "5000 BDT off on Asus ROG Strix G16.",
+        "description": "5000 BDT off on Asus ROG Strix G16 Gaming Laptop.",
         "expiry_date": "2025-08-15",
         "condition": "Valid for purchases above 150,000 BDT.",
         "coupon_type": "Flat Discount"
@@ -389,9 +372,8 @@
   },
   {
     "_id": "19",
-    "product_name": "HP LaserJet Pro MFP M428fdw",
-    "description": "Fast and reliable multifunction laser printer with wireless connectivity.",
-    "shop_link": "https://othoba.com/productdetails?id=19",
+    "description": "Exclusive offer! Save 15% on this high-speed multifunction laser printer.",
+    "shop_link": "https://othoba.com",
     "brand_name": "HP",
     "brand_logo_URL": "https://othoba.com/hp_logo.png",
     "category": "Printers",
@@ -409,9 +391,8 @@
   },
   {
     "_id": "20",
-    "product_name": "Philips Air Fryer HD9200",
-    "description": "Compact air fryer for oil-free cooking with Rapid Air Technology.",
-    "shop_link": "https://shwapno.com/productdetails?id=20",
+    "description": "Get 10% off on this compact, oil-free cooking air fryer. Limited online offer!",
+    "shop_link": "https://shwapno.com",
     "brand_name": "Philips",
     "brand_logo_URL": "https://shwapno.com/philips_logo.png",
     "category": "Home Appliances",
@@ -429,9 +410,8 @@
   },
   {
     "_id": "21",
-    "product_name": "Samsung 55-Inch QLED 4K Smart TV",
-    "description": "Stunning 4K QLED TV with Quantum HDR, AI Upscaling, and built-in Alexa support.",
-    "shop_link": "https://pickaboo.com/productdetails?id=21",
+    "description": "Limited-time sale! Get 10% off on this premium 4K QLED Smart TV with Quantum HDR and AI Upscaling.",
+    "shop_link": "https://pickaboo.com",
     "brand_name": "Samsung",
     "brand_logo_URL": "https://pickaboo.com/samsung_logo.png",
     "category": "Electronics",
@@ -449,9 +429,8 @@
   },
   {
     "_id": "22",
-    "product_name": "Apple iPad 10th Gen (64GB, Wi-Fi)",
-    "description": "10.9-inch Liquid Retina display, A14 Bionic chip, and all-day battery life.",
-    "shop_link": "https://daraz.com.bd/productdetails?id=22",
+    "description": "Exclusive deal! Get 2000 BDT off on your purchase of the latest Apple iPad 10th Gen.",
+    "shop_link": "https://daraz.com.bd",
     "brand_name": "Apple",
     "brand_logo_URL": "https://daraz.com.bd/apple_logo.png",
     "category": "Tablets",
@@ -469,9 +448,8 @@
   },
   {
     "_id": "23",
-    "product_name": "Sony PlayStation 5 (Disc Edition)",
-    "description": "Next-gen gaming console with ultra-fast SSD, ray tracing, and immersive haptics.",
-    "shop_link": "https://startech.com.bd/productdetails?id=23",
+    "description": "Special offer! Save 5% on this next-gen gaming console for a limited time.",
+    "shop_link": "https://startech.com.bd",
     "brand_name": "Sony",
     "brand_logo_URL": "https://startech.com.bd/sony_logo.png",
     "category": "Gaming",
@@ -489,9 +467,8 @@
   },
   {
     "_id": "24",
-    "product_name": "Xiaomi Mi Smart Air Purifier 4",
-    "description": "High-efficiency air purifier with real-time air quality monitoring and smart control.",
-    "shop_link": "https://chaldal.com/productdetails?id=24",
+    "description": "Get a 10% discount on this high-efficiency smart air purifier. Limited stock available!",
+    "shop_link": "https://chaldal.com",
     "brand_name": "Xiaomi",
     "brand_logo_URL": "https://chaldal.com/xiaomi_logo.png",
     "category": "Home Appliances",
