@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Navbar from "./components/Navbar"
 import { Outlet } from "react-router";
+import Footer from "./components/Footer";
 
 function App() {
   const [theme, setTheme] = useState('light')
@@ -12,6 +13,7 @@ function App() {
     <div data-theme={theme} className="min-h-screen text-base-content">
       <Navbar switchTheme={switchTheme} theme={theme}/>
       <Outlet />
+      <Footer />
     </div>
   )
 }

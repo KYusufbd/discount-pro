@@ -68,5 +68,8 @@
     --noise: 0;
   }
 
-  
-  
+@layer components {
+    .active {
+        background-color: var(--color-accent)
+    }
+}

@@ -9,7 +9,7 @@ const Navbar = ({switchTheme, theme}) => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/brand">Brand</NavLink>
+        <NavLink to="/brands">Brands</NavLink>
       </li>
       <li>
         <NavLink to="/profile">My Profile</NavLink>
@@ -20,7 +20,7 @@ const Navbar = ({switchTheme, theme}) => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 shadow-sm font-medium">
+    <div className="navbar bg-base-300 shadow-sm font-medium">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -55,7 +55,7 @@ const Navbar = ({switchTheme, theme}) => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn btn-secondary text-lg">Log in / Register</a>
+        <Link to="/login" className="btn btn-secondary text-lg">Log in / Register</Link>
         <button className="btn bg-transparent border-0 rounded-full text-3xl" onClick={() => switchTheme()}>{theme === 'light' ? <CiDark /> : <CiLight />}</button>
       </div>
     </div>
