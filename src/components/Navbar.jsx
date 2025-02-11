@@ -20,7 +20,7 @@ const Navbar = ({switchTheme, theme}) => {
     </>
   );
   return (
-    <div className="navbar bg-base-300 shadow-sm font-medium">
+    <div className="navbar section bg-base-300 shadow-sm font-medium">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -47,7 +47,7 @@ const Navbar = ({switchTheme, theme}) => {
             {navMenu}
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost text-2xl font-medium text-secondary">Discount Pro</Link>
+        <Link to="/" className="btn btn-ghost text-2xl font-bold text-secondary">Discount Pro</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-lg text-primary">
