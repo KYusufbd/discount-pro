@@ -53,13 +53,13 @@ const Navbar = ({ switchTheme, theme }) => {
           </div>
           <Link
             to="/"
-            className="btn btn-ghost text-2xl font-bold text-secondary"
+            className="text-2xl font-bold text-primary"
           >
             Discount Pro
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 text-lg text-primary">
+          <ul className="menu menu-horizontal px-1 text-lg text-secondary">
             {navMenu}
           </ul>
         </div>
