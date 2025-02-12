@@ -6,7 +6,8 @@ import CouponContext from "./contexts/CouponContext";
 
 function App() {
   const [theme, setTheme] = useState("light");
-  const [coupons, setCoupons] = useState();
+  const [coupons, setCoupons] = useState([]);
+  const [brands, setBrands] = useState();
 
   const switchTheme = () => {
     theme === "light" ? setTheme("dark") : setTheme("light");
@@ -15,11 +16,19 @@ function App() {
   useEffect(() => {
     fetch("coupon.json")
       .then((res) => res.json())
-      .then((data) => setCoupons(data));
+      .then((data) => {
+        setCoupons(data);
+      });
   }, []);
 
+  useEffect(() => {
+    const b = [];
+    coupons.map((e) => b.push(e.brand_name));
+    setBrands(b);
+  }, [coupons]);
+
   return (
-    <CouponContext.Provider value={coupons}>
+    <CouponContext.Provider value={{ coupons, brands }}>
       <div data-theme={theme} className="min-h-screen text-base-content">
         <Navbar switchTheme={switchTheme} theme={theme} />
         <Outlet />
