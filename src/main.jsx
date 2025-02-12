@@ -15,12 +15,12 @@ createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
-          <Route path="/brands" element={<Brands />}/>
-          <Route path="/profile" element={<Profile />}/>
-          <Route path="/about" element={<About />}/>
-          <Route path="/login" element={<LoginReg />}/>
+          <Route path="/brands" element={<Brands />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/login" element={<LoginReg />} />
         </Route>
       </Routes>
     </BrowserRouter>
-  </StrictMode>
+  </StrictMode>,
 );

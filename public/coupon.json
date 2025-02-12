@@ -1,95 +1,95 @@
-  [
-    {
-      "_id": "1",
-      "description": "Exclusive offer! Get 10% off on this premium unstitched Japanese silk three-piece suit with screen print designs.",
-      "shop_link": "https://ajkerdeal.com",
-      "brand_name": "AjkerDeal",
-      "brand_logo_URL": "https://ajkerdeal.com/logo.png",
-      "category": "Clothing",
-      "rating": 4.5,
-      "coupons": [
-        {
-          "coupon_code": "SILK10",
-          "description": "Get 10% off on all silk products.",
-          "expiry_date": "2025-05-01",
-          "condition": "Minimum purchase of $40 required.",
-          "coupon_type": "Percentage Discount"
-        }
-      ],
-      "isSaleOn": true
-    },
-    {
-      "_id": "2",
-      "description": "Limited-time deal! Save $15 on the AXON X-136 High-Power Hearing Aid for enhanced hearing support.",
-      "shop_link": "https://ajkerdeal.com",
-      "brand_name": "AXON",
-      "brand_logo_URL": "https://ajkerdeal.com/axon_logo.png",
-      "category": "Health",
-      "rating": 4.0,
-      "coupons": [
-        {
-          "coupon_code": "HEALTH15",
-          "description": "Save $15 on this high-power hearing aid.",
-          "expiry_date": "2025-06-15",
-          "condition": "Valid for new customers only.",
-          "coupon_type": "Flat Discount"
-        },
-        {
-          "coupon_code": "FREESHIPHEALTH",
-          "description": "Get free shipping on health products over $50.",
-          "expiry_date": "2025-04-30",
-          "condition": "Applies to selected health products.",
-          "coupon_type": "Free Shipping"
-        }
-      ],
-      "isSaleOn": true
-    },
-    {
-      "_id": "3",
-      "description": "Special offer! Get $20 off on the Microlife BP-3AR1-3P Automatic Blood Pressure Monitor with free adapter.",
-      "shop_link": "https://ajkerdeal.com",
-      "brand_name": "Microlife",
-      "brand_logo_URL": "https://ajkerdeal.com/microlife_logo.png",
-      "category": "Health",
-      "rating": 4.7,
-      "coupons": [
-        {
-          "coupon_code": "BP20OFF",
-          "description": "Get $20 off on Microlife Blood Pressure Monitors.",
-          "expiry_date": "2025-07-01",
-          "condition": "Limited stock available.",
-          "coupon_type": "Flat Discount"
-        }
-      ],
-      "isSaleOn": true
-    },
-    {
-      "_id": "4",
-      "description": "Exclusive deal! Enjoy 10% off on this Electric Pore Cleaner Massager for clear and smooth skin.",
-      "shop_link": "https://ajkerdeal.com",
-      "brand_name": "BeautyCare",
-      "brand_logo_URL": "https://ajkerdeal.com/beautycare_logo.png",
-      "category": "Beauty",
-      "rating": 4.3,
-      "coupons": [
-        {
-          "coupon_code": "BEAUTY10",
-          "description": "Enjoy 10% off on beauty care devices.",
-          "expiry_date": "2025-08-15",
-          "condition": "Valid for orders above $30.",
-          "coupon_type": "Percentage Discount"
-        },
-        {
-          "coupon_code": "FREESHIPBEAUTY",
-          "description": "Free shipping on beauty products over $40.",
-          "expiry_date": "2025-05-10",
-          "condition": "Online orders only.",
-          "coupon_type": "Free Shipping"
-        }
-      ],
-      "isSaleOn": true
-    },
-  
+[
+  {
+    "_id": "1",
+    "description": "Exclusive offer! Get 10% off on this premium unstitched Japanese silk three-piece suit with screen print designs.",
+    "shop_link": "https://ajkerdeal.com",
+    "brand_name": "AjkerDeal",
+    "brand_logo_URL": "https://ajkerdeal.com/logo.png",
+    "category": "Clothing",
+    "rating": 4.5,
+    "coupons": [
+      {
+        "coupon_code": "SILK10",
+        "description": "Get 10% off on all silk products.",
+        "expiry_date": "2025-05-01",
+        "condition": "Minimum purchase of $40 required.",
+        "coupon_type": "Percentage Discount"
+      }
+    ],
+    "isSaleOn": true
+  },
+  {
+    "_id": "2",
+    "description": "Limited-time deal! Save $15 on the AXON X-136 High-Power Hearing Aid for enhanced hearing support.",
+    "shop_link": "https://ajkerdeal.com",
+    "brand_name": "AXON",
+    "brand_logo_URL": "https://ajkerdeal.com/axon_logo.png",
+    "category": "Health",
+    "rating": 4.0,
+    "coupons": [
+      {
+        "coupon_code": "HEALTH15",
+        "description": "Save $15 on this high-power hearing aid.",
+        "expiry_date": "2025-06-15",
+        "condition": "Valid for new customers only.",
+        "coupon_type": "Flat Discount"
+      },
+      {
+        "coupon_code": "FREESHIPHEALTH",
+        "description": "Get free shipping on health products over $50.",
+        "expiry_date": "2025-04-30",
+        "condition": "Applies to selected health products.",
+        "coupon_type": "Free Shipping"
+      }
+    ],
+    "isSaleOn": true
+  },
+  {
+    "_id": "3",
+    "description": "Special offer! Get $20 off on the Microlife BP-3AR1-3P Automatic Blood Pressure Monitor with free adapter.",
+    "shop_link": "https://ajkerdeal.com",
+    "brand_name": "Microlife",
+    "brand_logo_URL": "https://ajkerdeal.com/microlife_logo.png",
+    "category": "Health",
+    "rating": 4.7,
+    "coupons": [
+      {
+        "coupon_code": "BP20OFF",
+        "description": "Get $20 off on Microlife Blood Pressure Monitors.",
+        "expiry_date": "2025-07-01",
+        "condition": "Limited stock available.",
+        "coupon_type": "Flat Discount"
+      }
+    ],
+    "isSaleOn": true
+  },
+  {
+    "_id": "4",
+    "description": "Exclusive deal! Enjoy 10% off on this Electric Pore Cleaner Massager for clear and smooth skin.",
+    "shop_link": "https://ajkerdeal.com",
+    "brand_name": "BeautyCare",
+    "brand_logo_URL": "https://ajkerdeal.com/beautycare_logo.png",
+    "category": "Beauty",
+    "rating": 4.3,
+    "coupons": [
+      {
+        "coupon_code": "BEAUTY10",
+        "description": "Enjoy 10% off on beauty care devices.",
+        "expiry_date": "2025-08-15",
+        "condition": "Valid for orders above $30.",
+        "coupon_type": "Percentage Discount"
+      },
+      {
+        "coupon_code": "FREESHIPBEAUTY",
+        "description": "Free shipping on beauty products over $40.",
+        "expiry_date": "2025-05-10",
+        "condition": "Online orders only.",
+        "coupon_type": "Free Shipping"
+      }
+    ],
+    "isSaleOn": true
+  },
+
   {
     "_id": "5",
     "description": "Limited-time offer! Get 10% off on Gluco Check Active Diabetes Test Strips for monitoring diabetes.",

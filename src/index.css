@@ -2,79 +2,80 @@
 @plugin "daisyui";
 
 @plugin "daisyui/theme" {
-    name: "discount-pro-theme";
-    default: false; /* set as default */
-    prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
-    color-scheme: light; /* color of browser-provided UI */
-  
-    /* Light Theme */
-    --color-base-100: #F9FAFB;
-    --color-base-200: #E5E7EB;
-    --color-base-300: #D1D5DB;
-    --color-base-content: #0D1E4C;
-    --color-primary: #0D1E4C;
-    --color-primary-content: #F9FAFB;
-    --color-secondary: #C48CB3;
-    --color-secondary-content: #F9FAFB;
-    --color-accent: #E5C9D7;
-    --color-accent-content: #0D1E4C;
-    --color-neutral: #83A6CE;
-    --color-neutral-content: #0D1E4C;
-    --color-info: #83A6CE;
-    --color-info-content: #F9FAFB;
-    --color-success: #22C55E;
-    --color-success-content: #F9FAFB;
-    --color-warning: #EAB308;
-    --color-warning-content: #0D1E4C;
-    --color-error: #DC2626;
-    --color-error-content: #F9FAFB;
-  
-    /* Dark Theme */
-    --color-base-100: #0B1B32;
-    --color-base-200: #0D1E4C;
-    --color-base-300: #26415E;
-    --color-base-content: #E5C9D7;
-    --color-primary: #C48CB3;
-    --color-primary-content: #0B1B32;
-    --color-secondary: #83A6CE;
-    --color-secondary-content: #0B1B32;
-    --color-accent: #E5C9D7;
-    --color-accent-content: #0B1B32;
-    --color-neutral: #26415E;
-    --color-neutral-content: #E5C9D7;
-    --color-info: #83A6CE;
-    --color-info-content: #0B1B32;
-    --color-success: #22C55E;
-    --color-success-content: #0B1B32;
-    --color-warning: #EAB308;
-    --color-warning-content: #0B1B32;
-    --color-error: #DC2626;
-    --color-error-content: #0B1B32;
-  
-    /* Border radius */
-    --radius-selector: 1rem;
-    --radius-field: 0.25rem;
-    --radius-box: 0.5rem;
-  
-    /* Base sizes */
-    --size-selector: 0.25rem;
-    --size-field: 0.25rem;
-  
-    /* Border size */
-    --border: 1px;
-  
-    /* Effects */
-    --depth: 1;
-    --noise: 0;
-  }
+  name: "discount-pro-theme";
+  default: false; /* set as default */
+  prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
+  color-scheme: light; /* color of browser-provided UI */
+
+  /* Light Theme */
+  --color-base-100: #f9fafb;
+  --color-base-200: #e5e7eb;
+  --color-base-300: #d1d5db;
+  --color-base-content: #0d1e4c;
+  --color-primary: #0d1e4c;
+  --color-primary-content: #f9fafb;
+  --color-secondary: #c48cb3;
+  --color-secondary-content: #f9fafb;
+  --color-accent: #e5c9d7;
+  --color-accent-content: #0d1e4c;
+  --color-neutral: #83a6ce;
+  --color-neutral-content: #0d1e4c;
+  --color-info: #83a6ce;
+  --color-info-content: #f9fafb;
+  --color-success: #22c55e;
+  --color-success-content: #f9fafb;
+  --color-warning: #eab308;
+  --color-warning-content: #0d1e4c;
+  --color-error: #dc2626;
+  --color-error-content: #f9fafb;
+
+  /* Dark Theme */
+  --color-base-100: #0b1b32;
+  --color-base-200: #0d1e4c;
+  --color-base-300: #26415e;
+  --color-base-content: #e5c9d7;
+  --color-primary: #c48cb3;
+  --color-primary-content: #0b1b32;
+  --color-secondary: #83a6ce;
+  --color-secondary-content: #0b1b32;
+  --color-accent: #e5c9d7;
+  --color-accent-content: #0b1b32;
+  --color-neutral: #26415e;
+  --color-neutral-content: #e5c9d7;
+  --color-info: #83a6ce;
+  --color-info-content: #0b1b32;
+  --color-success: #22c55e;
+  --color-success-content: #0b1b32;
+  --color-warning: #eab308;
+  --color-warning-content: #0b1b32;
+  --color-error: #dc2626;
+  --color-error-content: #0b1b32;
+
+  /* Border radius */
+  --radius-selector: 1rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.5rem;
+
+  /* Base sizes */
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  /* Border size */
+  --border: 1px;
+
+  /* Effects */
+  --depth: 1;
+  --noise: 0;
+}
 
 @layer components {
-    .active {
-        background-color: var(--color-accent)
-    }
+  .active {
+    background-color: var(--color-accent);
+  }
 }
 
 .section {
-    max-width: 1440px;
-    margin: 0 auto;
+  width: 1440px;
+  max-width: 100%;
+  margin: 0 auto;
 }
