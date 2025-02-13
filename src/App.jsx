@@ -13,6 +13,7 @@ function App() {
     theme === "light" ? setTheme("dark") : setTheme("light");
   };
 
+  // Code for finding all coupon data:
   useEffect(() => {
     fetch("coupon.json")
       .then((res) => res.json())
@@ -21,9 +22,10 @@ function App() {
       });
   }, []);
 
+  // Code for finding brands:
   useEffect(() => {
     const b = [];
-    coupons.map((e) => b.push(e.brand_name));
+    coupons.map((e) => b.includes(e.brand_name) || b.push(e.brand_name));
     setBrands(b);
   }, [coupons]);
 

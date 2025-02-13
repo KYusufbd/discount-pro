@@ -1,7 +1,7 @@
 [
   {
     "_id": "1",
-    "description": "Exclusive offer! Get 10% off on this premium unstitched Japanese silk three-piece suit with screen print designs.",
+    "description": "Exclusive offer! Get 10% off on premium unstitched Japanese silk three-piece suit with screen print designs.",
     "shop_link": "https://ajkerdeal.com",
     "brand_name": "AjkerDeal",
     "brand_logo_URL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZU-xt1dmFN4g5LvgmBtkt3SpZmMjhFPSOsA&s",
@@ -29,7 +29,7 @@
     "coupons": [
       {
         "coupon_code": "HEALTH15",
-        "description": "Save $15 on this high-power hearing aid.",
+        "description": "Save $15 on high-power hearing aid.",
         "expiry_date": "2025-06-15",
         "condition": "Valid for new customers only.",
         "coupon_type": "Flat Discount"
@@ -65,7 +65,7 @@
   },
   {
     "_id": "4",
-    "description": "Exclusive deal! Enjoy 10% off on this Electric Pore Cleaner Massager for clear and smooth skin.",
+    "description": "Exclusive deal! Enjoy 10% off on Electric Pore Cleaner Massager for clear and smooth skin.",
     "shop_link": "https://ajkerdeal.com",
     "brand_name": "BeautyCare",
     "brand_logo_URL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxmSLZntJkN9g_i1xcNQQJK7aj_XaWRqN00A&s",
@@ -95,7 +95,7 @@
     "description": "Limited-time offer! Get 10% off on Gluco Check Active Diabetes Test Strips for monitoring diabetes.",
     "shop_link": "https://ajkerdeal.com",
     "brand_name": "Gluco Check",
-    "brand_logo_URL": "https://ajkerdeal.com/glucocheck_logo.png",
+    "brand_logo_URL": "https://cdn.bdstall.com/product-image/giant_240804.jpg",
     "category": "Health",
     "rating": 4.6,
     "coupons": [
@@ -111,7 +111,7 @@
   },
   {
     "_id": "6",
-    "description": "Exclusive deal! Save up to 20% on this Digital Therapy Machine with voice guidance and lighting display.",
+    "description": "Exclusive deal! Save up to 20% on Digital Therapy Machine with voice guidance and lighting display.",
     "shop_link": "https://ajkerdeal.com",
     "brand_name": "TherapyPro",
     "brand_logo_URL": "https://media.licdn.com/dms/image/v2/D560BAQGUhjoACgacMw/company-logo_200_200/company-logo_200_200/0/1665453853233/therapy_pro_logo?e=2147483647&v=beta&t=Pkz0FhnJbJJxn20kYEfLoq_20bxANgcbG5q-f6Tn4_g",
@@ -137,7 +137,7 @@
   },
   {
     "_id": "7",
-    "description": "Special discount! Get 20% off on this stylish unstitched block printed cotton salwar kameez.",
+    "description": "Special discount! Get 20% off on stylish unstitched block printed cotton salwar kameez.",
     "shop_link": "https://ajkerdeal.com",
     "brand_name": "FashionHouse",
     "brand_logo_URL": "https://static.vecteezy.com/system/resources/thumbnails/010/004/146/small_2x/fashion-house-icon-logo-design-with-creative-unique-fresh-concept-premium-vector.jpg",
@@ -156,7 +156,7 @@
   },
   {
     "_id": "8",
-    "description": "Limited-time deal! Save up to 10% on this Hand Mixer Cappuccino Coffee Maker.",
+    "description": "Limited-time deal! Save up to 10% on Hand Mixer Cappuccino Coffee Maker.",
     "shop_link": "https://ajkerdeal.com",
     "brand_name": "KitchenPro",
     "brand_logo_URL": "https://kitchenpro.com.ph/wp-content/uploads/2024/10/Kitchenpro.jpg",
@@ -172,7 +172,7 @@
       },
       {
         "coupon_code": "COFFEELOVE",
-        "description": "Flat 50 BDT off on this coffee maker.",
+        "description": "Flat 50 BDT off on coffee maker.",
         "expiry_date": "2025-08-01",
         "condition": "No minimum purchase required.",
         "coupon_type": "Flat Discount"
@@ -182,7 +182,7 @@
   },
   {
     "_id": "9",
-    "description": "Limited-time offer! Get 15% off on this elegant Anarkali gown, perfect for special occasions.",
+    "description": "Limited-time offer! Get 15% off on elegant Anarkali gown, perfect for special occasions.",
     "shop_link": "https://ajkerdeal.com",
     "brand_name": "EthnicWear",
     "brand_logo_URL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwBLf9ALwfUMXe83h6BhIU7VsHSEYDmosCFg&s",
@@ -201,7 +201,7 @@
   },
   {
     "_id": "10",
-    "description": "Exclusive discount! Enjoy 10% off on this stunning maroon Indian georgette saree.",
+    "description": "Exclusive discount! Enjoy 10% off on stunning maroon Indian georgette saree.",
     "shop_link": "https://ajkerdeal.com",
     "brand_name": "SareeCollection",
     "brand_logo_URL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmN-3dcAz5usbQATvIJY2PE7IvdPkhKlsPPA&s",
@@ -214,41 +214,17 @@
         "expiry_date": "2025-04-15",
         "condition": "Minimum purchase of 1500 BDT.",
         "coupon_type": "Percentage"
-      }
-    ],
-    "isSaleOn": true
-  },
-  {
-    "_id": "11",
-    "description": "Special sale! Save 15% on this elegant black and golden georgette saree.",
-    "shop_link": "https://ajkerdeal.com",
-    "brand_name": "SareeCollection",
-    "brand_logo_URL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmN-3dcAz5usbQATvIJY2PE7IvdPkhKlsPPA&s",
-    "category": "Clothing",
-    "rating": 4.6,
-    "coupons": [
+      },
       {
         "coupon_code": "ELEGANT15",
         "description": "15% off on elegant sarees.",
         "expiry_date": "2025-05-01",
         "condition": "Applicable for first-time buyers.",
         "coupon_type": "Percentage"
-      }
-    ],
-    "isSaleOn": true
-  },
-  {
-    "_id": "12",
-    "description": "Don't miss out! Get a flat 10% discount on this stylish blue georgette saree.",
-    "shop_link": "https://ajkerdeal.com",
-    "brand_name": "SareeCollection",
-    "brand_logo_URL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmN-3dcAz5usbQATvIJY2PE7IvdPkhKlsPPA&s",
-    "category": "Clothing",
-    "rating": 4.3,
-    "coupons": [
+      },
       {
         "coupon_code": "BLUE10",
-        "description": "Flat 10% discount on this blue georgette saree.",
+        "description": "Flat 10% discount on blue georgette saree.",
         "expiry_date": "2025-06-30",
         "condition": "No minimum purchase required.",
         "coupon_type": "Percentage"
@@ -258,7 +234,7 @@
   },
   {
     "_id": "13",
-    "description": "Special launch offer! Get 5% off on this premium flagship smartphone with top-tier features.",
+    "description": "Special launch offer! Get 5% off on premium flagship smartphone with top-tier features.",
     "shop_link": "https://startech.com.bd",
     "brand_name": "Samsung",
     "brand_logo_URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/1280px-Samsung_Logo.svg.png",
@@ -277,7 +253,7 @@
   },
   {
     "_id": "14",
-    "description": "Limited-time deal! Save 10,000 BDT on this powerful and lightweight Apple MacBook Air M2.",
+    "description": "Limited-time deal! Save 10,000 BDT on powerful and lightweight Apple MacBook Air M2.",
     "shop_link": "https://startech.com.bd",
     "brand_name": "Apple",
     "brand_logo_URL": "https://static-00.iconduck.com/assets.00/apple-logo-icon-1661x2048-8adk63j7.png",
@@ -299,7 +275,7 @@
     "description": "Exclusive discount! Get 20% off on these industry-leading noise-canceling headphones.",
     "shop_link": "https://pickaboo.com",
     "brand_name": "Sony",
-    "brand_logo_URL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JL_41ED2Y-xMrtLzFGtOqFEG80d9V1j4cQ&s",
+    "brand_logo_URL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpje_CCUlUvR2DZK-0yj1ewCHk3GNIai2ojQ&s",
     "category": "Audio",
     "rating": 4.7,
     "coupons": [
@@ -315,7 +291,7 @@
   },
   {
     "_id": "16",
-    "description": "Special sale! Save 15% on this ultra-slim 5G smartphone with AMOLED display.",
+    "description": "Special sale! Save 15% on ultra-slim 5G smartphone with AMOLED display.",
     "shop_link": "https://daraz.com.bd",
     "brand_name": "Xiaomi",
     "brand_logo_URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Xiaomi_logo_%282021-%29.svg/1024px-Xiaomi_logo_%282021-%29.svg.png",
@@ -334,7 +310,7 @@
   },
   {
     "_id": "17",
-    "description": "Limited stock! Get 10% off on this advanced ergonomic wireless mouse.",
+    "description": "Limited stock! Get 10% off on advanced ergonomic wireless mouse.",
     "shop_link": "https://clickbd.com",
     "brand_name": "Logitech",
     "brand_logo_URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Logitech_logo.svg/2560px-Logitech_logo.svg.png",
@@ -353,10 +329,10 @@
   },
   {
     "_id": "18",
-    "description": "Special gaming deal! Get 5000 BDT off on this high-performance gaming laptop.",
+    "description": "Special gaming deal! Get 5000 BDT off on high-performance gaming laptop.",
     "shop_link": "https://startech.com.bd",
     "brand_name": "Asus",
-    "brand_logo_URL": "https://e7.pngegg.com/pngimages/279/150/png-clipart-asus-global-pte-ltd-%E5%8D%8E%E7%A1%95-zenfone-3-deluxe-zs550kl-business-business-angle-text.png",
+    "brand_logo_URL": "https://logos-world.net/wp-content/uploads/2020/07/Asus-Logo-1995-present.png",
     "category": "Laptops",
     "rating": 4.7,
     "coupons": [
@@ -372,7 +348,7 @@
   },
   {
     "_id": "19",
-    "description": "Exclusive offer! Save 15% on this high-speed multifunction laser printer.",
+    "description": "Exclusive offer! Save 15% on high-speed multifunction laser printer.",
     "shop_link": "https://othoba.com",
     "brand_name": "HP",
     "brand_logo_URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/HP_logo_2012.svg/640px-HP_logo_2012.svg.png",
@@ -391,7 +367,7 @@
   },
   {
     "_id": "20",
-    "description": "Get 10% off on this compact, oil-free cooking air fryer. Limited online offer!",
+    "description": "Get 10% off on compact, oil-free cooking air fryer. Limited online offer!",
     "shop_link": "https://shwapno.com",
     "brand_name": "Philips",
     "brand_logo_URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Philips_logo_new.svg/2560px-Philips_logo_new.svg.png",
@@ -410,7 +386,7 @@
   },
   {
     "_id": "21",
-    "description": "Limited-time sale! Get 10% off on this premium 4K QLED Smart TV with Quantum HDR and AI Upscaling.",
+    "description": "Limited-time sale! Get 10% off on premium 4K QLED Smart TV with Quantum HDR and AI Upscaling.",
     "shop_link": "https://pickaboo.com",
     "brand_name": "Samsung",
     "brand_logo_URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/1280px-Samsung_Logo.svg.png",
@@ -448,10 +424,10 @@
   },
   {
     "_id": "23",
-    "description": "Special offer! Save 5% on this next-gen gaming console for a limited time.",
+    "description": "Special offer! Save 5% on next-gen gaming console for a limited time.",
     "shop_link": "https://startech.com.bd",
     "brand_name": "Sony",
-    "brand_logo_URL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JL_41ED2Y-xMrtLzFGtOqFEG80d9V1j4cQ&s",
+    "brand_logo_URL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpje_CCUlUvR2DZK-0yj1ewCHk3GNIai2ojQ&s",
     "category": "Gaming",
     "rating": 4.9,
     "coupons": [
@@ -467,7 +443,7 @@
   },
   {
     "_id": "24",
-    "description": "Get a 10% discount on this high-efficiency smart air purifier. Limited stock available!",
+    "description": "Get a 10% discount on high-efficiency smart air purifier. Limited stock available!",
     "shop_link": "https://chaldal.com",
     "brand_name": "Xiaomi",
     "brand_logo_URL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JL_41ED2Y-xMrtLzFGtOqFEG80d9V1j4cQ&s",

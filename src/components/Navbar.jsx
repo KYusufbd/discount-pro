@@ -51,10 +51,7 @@ const Navbar = ({ switchTheme, theme }) => {
               </Link>
             </ul>
           </div>
-          <Link
-            to="/"
-            className="text-2xl font-bold text-primary"
-          >
+          <Link to="/" className="text-2xl font-bold text-primary">
             Discount Pro
           </Link>
         </div>
