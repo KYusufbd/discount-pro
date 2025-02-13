@@ -66,10 +66,12 @@ const Brands = () => {
                 </div>
               </div>
               <div className="col-span-1 md:col-span-2 lg:col-span-3 flex flex-col gap-4 justify-center items-start">
-                <h5 className="text-2xl font-semibold">
+                <h5 className="text-2xl text-primary font-bold">
                   Brand: {brand.brand_name}
                 </h5>
-                <p className="text-xl">{brand.description}</p>
+                <p className="text-xl opacity-70 font-medium">
+                  {brand.description}
+                </p>
               </div>
               <div className="col-span-1 flex flex-col p-4">
                 <button className="btn btn-primary text-lg font-semibold">
