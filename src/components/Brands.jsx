@@ -9,8 +9,27 @@ const Brands = () => {
   return (
     <div>
       <div className="w-full bg-primary text-primary-content py-4">
-        <div className="section">
+        <div className="section grid grid-cols-2 justify-between">
           <h1 className="text-start font-bold text-3xl">All Brands</h1>
+          <label className="input w-full">
+            <svg
+              className="h-[1em] opacity-50"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <g
+                strokeLinejoin="round"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                fill="none"
+                stroke="currentColor"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </g>
+            </svg>
+            <input type="search" className="grow" placeholder="Search" />
+          </label>
         </div>
       </div>
       <div className="section flex flex-col gap-4 bg-base-200 py-8">
@@ -19,7 +38,7 @@ const Brands = () => {
           return (
             <div
               key={`brand${brand._id}`}
-              className="bg-white card grid grid-cols-6"
+              className="bg-base-100 card grid grid-cols-6"
             >
               <div className="col-span-2 flex flex-col justify-center items-center py-4">
                 <h1 className="text-2xl font-semibold">{brand.brand_name}</h1>
@@ -44,12 +63,12 @@ const Brands = () => {
               </div>
               <div className="col-span-3 flex flex-col gap-4 justify-center items-start">
                 <h5 className="text-2xl font-semibold">
-                  Brand Name: {brand.brand_name}
+                  Brand: {brand.brand_name}
                 </h5>
-                <p className="text-xl">Description: {brand.description}</p>
+                <p className="text-xl">{brand.description}</p>
               </div>
               <div className="col-span-1 flex flex-col p-4">
-                <button className="btn btn-primary">View Coupons</button>
+                <button className="btn btn-primary text-lg font-semibold">View Coupons</button>
                 {brand.isSaleOn && (
                   <motion.p
                     initial={{ y: 0 }}
