@@ -31,7 +31,7 @@ function App() {
 
   return (
     <CouponContext.Provider value={{ coupons, brands }}>
-      <div data-theme={theme} className="min-h-screen text-base-content">
+      <div data-theme={theme} className="w-full text-base-content box-border">
         <Navbar switchTheme={switchTheme} theme={theme} />
         <Outlet />
         <Footer />

@@ -9,9 +9,9 @@ const Brands = () => {
   return (
     <div>
       <div className="w-full bg-primary text-primary-content py-4">
-        <div className="section grid grid-cols-2 justify-between">
+        <div className="section flex flex-row justify-between">
           <h1 className="text-start font-bold text-3xl">All Brands</h1>
-          <label className="input w-full">
+          <label className="input w-1/3 bg-accent text-accent-content">
             <svg
               className="h-[1em] opacity-50"
               xmlns="http://www.w3.org/2000/svg"
@@ -28,19 +28,23 @@ const Brands = () => {
                 <path d="m21 21-4.3-4.3"></path>
               </g>
             </svg>
-            <input type="search" className="grow" placeholder="Search" />
+            <input
+              type="search"
+              className="grow bg-accent text-accent-content text-lg"
+              placeholder="Search"
+            />
           </label>
         </div>
       </div>
-      <div className="section flex flex-col gap-4 bg-base-200 py-8">
+      <div className="section flex flex-col gap-5 bg-base-200 py-8">
         {brands?.map((b) => {
           const brand = coupons.find((c) => c.brand_name === b);
           return (
             <div
               key={`brand${brand._id}`}
-              className="bg-base-100 card grid grid-cols-6"
+              className="bg-base-100 card grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 p-4 gap-4"
             >
-              <div className="col-span-2 flex flex-col justify-center items-center py-4">
+              <div className="col-span-1 flex flex-col justify-center items-center py-4">
                 <h1 className="text-2xl font-semibold">{brand.brand_name}</h1>
                 <div className="h-28 w-40 flex justify-center items-center">
                   <img
@@ -49,7 +53,7 @@ const Brands = () => {
                     className="max-h-full w-full m-auto"
                   />
                 </div>
-                <div className="flex flex-row items-center gap-3">
+                <div className="flex flex-row items-center gap-2 flex-wrap">
                   <StarRatings
                     rating={brand.rating}
                     starRatedColor="orange"
@@ -61,14 +65,16 @@ const Brands = () => {
                   <p className="text-xl font-semibold">({brand.rating})</p>
                 </div>
               </div>
-              <div className="col-span-3 flex flex-col gap-4 justify-center items-start">
+              <div className="col-span-1 md:col-span-2 lg:col-span-3 flex flex-col gap-4 justify-center items-start">
                 <h5 className="text-2xl font-semibold">
                   Brand: {brand.brand_name}
                 </h5>
                 <p className="text-xl">{brand.description}</p>
               </div>
               <div className="col-span-1 flex flex-col p-4">
-                <button className="btn btn-primary text-lg font-semibold">View Coupons</button>
+                <button className="btn btn-primary text-lg font-semibold">
+                  View Coupons
+                </button>
                 {brand.isSaleOn && (
                   <motion.p
                     initial={{ y: 0 }}
