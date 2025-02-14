@@ -2,6 +2,7 @@ import { useContext } from "react";
 import CouponContext from "../contexts/CouponContext";
 import StarRatings from "react-star-ratings";
 import { motion } from "framer-motion";
+import { Link } from "react-router";
 
 const Brands = () => {
   const { coupons, brands } = useContext(CouponContext);
@@ -74,9 +75,12 @@ const Brands = () => {
                 </p>
               </div>
               <div className="col-span-1 flex flex-col p-4">
-                <button className="btn btn-primary text-lg font-semibold">
+                <Link
+                  to={`/brand/${brand._id}`}
+                  className="btn btn-primary text-lg font-semibold"
+                >
                   View Coupons
-                </button>
+                </Link>
                 {brand.isSaleOn && (
                   <motion.p
                     initial={{ y: 0 }}
