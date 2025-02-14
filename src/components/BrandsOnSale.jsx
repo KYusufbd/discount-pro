@@ -11,7 +11,7 @@ const BrandsOnSale = ({ coupons }) => {
   }, [coupons]);
 
   return (
-    <div className="w-full py-12 bg-base-200">
+    <div className="w-full bg-base-200">
       <div className="w-full bg-primary text-primary-content py-4">
         <div className="section flex flex-row justify-between">
           <h1 className="text-start font-bold text-3xl">Brands On Sale</h1>

@@ -12,7 +12,6 @@ const Banner = () => {
           spaceBetween={50}
           slidesPerView={1}
           autoplay
-          onSwiper={(swiper) => console.log(swiper)}
         >
           <SwiperSlide>
             <Slide
