@@ -32,10 +32,10 @@ const BrandsOnSale = ({ coupons }) => {
                 />
               </figure>
               <div className="card-body items-center text-center w-full bg-primary text-primary-content">
-                <h2 className="card-title text-3xl font-bold">
+                <h2 className="card-title text-3xl font-bold text-secondary-content">
                   {b.brand_name}
                 </h2>
-                <div className="text-xl">
+                <div className="text-xl opacity-75">
                   <p>Total Coupons: {b.coupons.length}</p>
                   <p>Calegory: {b.category}</p>
                 </div>

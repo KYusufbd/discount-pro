@@ -1,9 +1,11 @@
 const LoginReg = () => {
   return (
     <div>
-      <h1 className="text-center font-bold text-4xl text-accent">
-        Log in or Register
-      </h1>
+      <div className="w-full bg-primary text-primary-content py-4">
+        <div className="section flex flex-row justify-between">
+          <h1 className="text-start font-bold text-3xl">Log In Here</h1>
+        </div>
+      </div>
     </div>
   );
 };

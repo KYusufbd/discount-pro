@@ -1,9 +1,11 @@
 const Profile = () => {
   return (
     <div>
-      <h1 className="text-center font-bold text-4xl text-accent">
-        User profile
-      </h1>
+      <div className="w-full bg-primary text-primary-content py-4">
+        <div className="section flex flex-row justify-between">
+          <h1 className="text-start font-bold text-3xl">User Profile</h1>
+        </div>
+      </div>
     </div>
   );
 };

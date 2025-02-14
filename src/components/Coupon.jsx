@@ -2,7 +2,8 @@ import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router";
 import CouponContext from "../contexts/CouponContext";
 import StarRatings from "react-star-ratings";
-import { div } from "framer-motion/client";
+import CopyToClipboard from "react-copy-to-clipboard";
+import { toast, ToastContainer } from "react-toastify";
 
 const Coupon = () => {
   const brandId = useParams().id;
@@ -47,9 +48,9 @@ const Coupon = () => {
             return (
               <div
                 key={couponObj.coupons.indexOf(e)}
-                className="card flex flex-col justify-between gap-8 text-lg shadow rounded-2xl px-6 py-4 bg-primary-content text-primary"
+                className="flex flex-col justify-between gap-8 text-lg shadow rounded-2xl px-6 py-4 bg-primary-content text-primary"
               >
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-4 text">
                   <p className="">
                     <strong> Coupon Code:</strong> {e.coupon_code}
                   </p>
@@ -66,10 +67,24 @@ const Coupon = () => {
                     <strong> Coupon Type:</strong> {e.coupon_type}
                   </p>
                 </div>
-                <div className="flex flex-row gap-6">
-                  <button className="btn btn-accent text-lg">Copy Code</button>
-                  <button className="btn btn-accent text-lg">Use Now</button>
+                <div className="flex flex-row gap-6 mt-auto">
+                  <CopyToClipboard
+                    text={e.coupon_code}
+                    onCopy={() => toast("Coupon code copied successfully!")}
+                  >
+                    <button className="btn btn-accent text-lg">
+                      Copy Code
+                    </button>
+                  </CopyToClipboard>
+                  <a
+                    href={couponObj.shop_link}
+                    target="_blank"
+                    className="btn btn-accent text-lg"
+                  >
+                    Use Now
+                  </a>
                 </div>
+                <ToastContainer position="top-center" />
               </div>
             );
           })}
