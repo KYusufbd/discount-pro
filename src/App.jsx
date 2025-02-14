@@ -15,7 +15,7 @@ function App() {
 
   // Code for finding all coupon data:
   useEffect(() => {
-    fetch("coupon.json")
+    fetch("/coupon.json")
       .then((res) => res.json())
       .then((data) => {
         setCoupons(data);
