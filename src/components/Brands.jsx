@@ -11,8 +11,13 @@ const Brands = () => {
 
   useEffect(() => {
     const filteredByCateg = [];
-    category && coupons.map(c => c.category === category && filteredByCateg.push(c.brand_name));
-    filteredByCateg.length ? setBrandsToDisplay(filteredByCateg) : setBrandsToDisplay(brands)
+    category &&
+      coupons.map(
+        (c) => c.category === category && filteredByCateg.push(c.brand_name),
+      );
+    filteredByCateg.length
+      ? setBrandsToDisplay(filteredByCateg)
+      : setBrandsToDisplay(brands);
   }, [brands, category, coupons]);
 
   return (

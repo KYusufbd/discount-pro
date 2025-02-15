@@ -20,7 +20,8 @@ const Categories = ({ coupons }) => {
       <div className="section flex flex-row flex-wrap gap-4 justify-between">
         {categories.map((c) => {
           return (
-            <Link to={`/category/${c}`}
+            <Link
+              to={`/category/${c}`}
               key={categories.indexOf(c)}
               className="btn btn-secondary text-lg md:text-xl lg:text-2xl"
             >

@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
+import { Link } from "react-router";
 
 const BrandsOnSale = ({ coupons }) => {
   const [brandsOnSale, setbrandsOnSale] = useState([]);
@@ -20,7 +21,8 @@ const BrandsOnSale = ({ coupons }) => {
       <div className="section grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 py-6">
         {brandsOnSale.map((b) => {
           return (
-            <div
+            <Link
+              to={`/brand/${b._id}`}
               key={b._id}
               className="card bg-base-100 w-full shadow-lg rounded-2xl overflow-hidden"
             >
@@ -40,7 +42,7 @@ const BrandsOnSale = ({ coupons }) => {
                   <p>Calegory: {b.category}</p>
                 </div>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>
