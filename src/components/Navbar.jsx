@@ -20,7 +20,7 @@ const Navbar = ({ switchTheme, theme }) => {
     </>
   );
   return (
-    <div className="w-full bg-base-300">
+    <div className="w-full bg-base-300 sticky top-0 z-20">
       <div className="navbar section shadow-sm font-medium">
         <div className="navbar-start">
           <div className="dropdown">
@@ -65,7 +65,7 @@ const Navbar = ({ switchTheme, theme }) => {
             to="/login"
             className="btn btn-secondary text-lg hidden md:flex"
           >
-            Log in / Register
+            Log In
           </Link>
           <button
             className="btn bg-transparent border-0 rounded-full text-3xl"
