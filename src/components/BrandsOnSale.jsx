@@ -22,7 +22,7 @@ const BrandsOnSale = ({ coupons }) => {
           return (
             <div
               key={b._id}
-              className="card bg-base-100 w-full shadow-sm rounded-2xl overflow-hidden"
+              className="card bg-base-100 w-full shadow-lg rounded-2xl overflow-hidden"
             >
               <figure className="w-full h-40 px-4 py-6">
                 <img

@@ -1,11 +1,19 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import CouponContext from "../contexts/CouponContext";
 import StarRatings from "react-star-ratings";
 import { motion } from "framer-motion";
-import { Link } from "react-router";
+import { Link, useParams } from "react-router";
 
 const Brands = () => {
   const { coupons, brands } = useContext(CouponContext);
+  const [brandsToDisplay, setBrandsToDisplay] = useState([]);
+  const category = useParams().category;
+
+  useEffect(() => {
+    const filteredByCateg = [];
+    category && coupons.map(c => c.category === category && filteredByCateg.push(c.brand_name));
+    filteredByCateg.length ? setBrandsToDisplay(filteredByCateg) : setBrandsToDisplay(brands)
+  }, [brands, category, coupons]);
 
   return (
     <div>
@@ -38,7 +46,7 @@ const Brands = () => {
         </div>
       </div>
       <div className="section flex flex-col gap-5 bg-base-200 py-8">
-        {brands?.map((b) => {
+        {brandsToDisplay?.map((b) => {
           const brand = coupons.find((c) => c.brand_name === b);
           return (
             <div

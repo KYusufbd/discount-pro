@@ -16,8 +16,6 @@ const PopularShops = ({ coupons }) => {
     setShops(s);
   }, [coupons]);
 
-  console.log(shops);
-
   return (
     <div className="flex flex-col gap-4 w-full py-8 bg-accent-content">
       <div className="w-full text-accent">
@@ -53,7 +51,7 @@ const PopularShops = ({ coupons }) => {
 };
 
 PopularShops.propTypes = {
-  coupons: PropTypes.string.isRequired,
+  coupons: PropTypes.array.isRequired,
 };
 
 export default PopularShops;

@@ -4,6 +4,7 @@ import BrandsOnSale from "./BrandsOnSale";
 import TopBrands from "./TopBrands";
 import CouponContext from "../contexts/CouponContext";
 import PopularShops from "./PopularShops";
+import Categories from "./Categories";
 
 const Home = () => {
   const { coupons, brands } = useContext(CouponContext);
@@ -12,6 +13,7 @@ const Home = () => {
       <Banner />
       <TopBrands coupons={coupons} brands={brands} />
       <BrandsOnSale coupons={coupons} brands={brands} />
+      <Categories coupons={coupons} />
       <PopularShops coupons={coupons} />
     </div>
   );

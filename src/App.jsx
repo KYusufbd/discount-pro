@@ -7,7 +7,7 @@ import CouponContext from "./contexts/CouponContext";
 function App() {
   const [theme, setTheme] = useState("light");
   const [coupons, setCoupons] = useState([]);
-  const [brands, setBrands] = useState();
+  const [brands, setBrands] = useState([]);
 
   const switchTheme = () => {
     theme === "light" ? setTheme("dark") : setTheme("light");
