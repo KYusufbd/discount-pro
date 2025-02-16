@@ -11,12 +11,7 @@ const Register = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(name, email, password);
-
-    createUser(email, password)?.then(userCredential => {
-      console.log(userCredential);
-    }).catch(error => {
-      console.log(error);
-    })
+    createUser(email, password)
   };
   return (
     <div className="min-h-screen flex flex-col gap-8 bg-base-300">

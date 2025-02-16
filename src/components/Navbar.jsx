@@ -1,8 +1,11 @@
 import PropTypes from "prop-types";
+import { useContext } from "react";
 import { CiDark, CiLight } from "react-icons/ci";
 import { Link, NavLink } from "react-router";
+import AuthContext from "../contexts/AuthContext";
 
 const Navbar = ({ switchTheme, theme }) => {
+  const { logOut } = useContext(AuthContext);
   const navMenu = (
     <>
       <li>
@@ -47,7 +50,7 @@ const Navbar = ({ switchTheme, theme }) => {
             >
               {navMenu}
               <Link to="/login" className="md:hidden btn btn-secondary text-lg">
-                Log in / Register
+                Log In
               </Link>
             </ul>
           </div>
@@ -67,6 +70,12 @@ const Navbar = ({ switchTheme, theme }) => {
           >
             Log In
           </Link>
+          <button
+            onClick={logOut}
+            className="btn btn-secondary text-lg hidden md:flex"
+          >
+            Log Out
+          </button>
           <button
             className="btn bg-transparent border-0 rounded-full text-3xl"
             onClick={() => switchTheme()}
