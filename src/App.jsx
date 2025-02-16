@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import { Outlet } from "react-router";
 import Footer from "./components/Footer";
 import CouponContext from "./contexts/CouponContext";
+import AuthProvider from "./firebase/AuthProvider";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -31,11 +32,13 @@ function App() {
 
   return (
     <CouponContext.Provider value={{ coupons, brands }}>
-      <div data-theme={theme} className="w-full text-base-content box-border">
-        <Navbar switchTheme={switchTheme} theme={theme} />
-        <Outlet />
-        <Footer />
-      </div>
+      <AuthProvider>
+        <div data-theme={theme} className="w-full text-base-content box-border">
+          <Navbar switchTheme={switchTheme} theme={theme} />
+          <Outlet />
+          <Footer />
+        </div>
+      </AuthProvider>
     </CouponContext.Provider>
   );
 }

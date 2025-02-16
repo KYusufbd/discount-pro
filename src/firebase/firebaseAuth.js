@@ -2,7 +2,15 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import "dotenv";
 
-const firebaseConfig = import.meta.env;
+const fbconfig = import.meta.env;
+const firebaseConfig = {
+  apiKey: fbconfig.VITE_apiKey,
+  authDomain: fbconfig.VITE_authDomain,
+  projectId: fbconfig.VITE_projectId,
+  storageBucket: fbconfig.VITE_storageBucket,
+  messagingSenderId: fbconfig.VITE_messagingSenderId,
+  appId: fbconfig.VITE_appId
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

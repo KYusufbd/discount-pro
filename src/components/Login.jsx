@@ -22,6 +22,7 @@ const Login = () => {
               placeholder="Password"
               className="input input-md"
             />
+            <button className="text-secondary text-start">Forgot pasword?</button>
             <div className="card-actions justify-end">
               <button className="btn btn-primary text-lg w-full">Log In</button>
               <p className="text-center">
