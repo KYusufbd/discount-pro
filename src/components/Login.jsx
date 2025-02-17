@@ -4,7 +4,7 @@ import AuthContext from "../contexts/AuthContext";
 import LoginWithGoogle from "./LoginWithGoogle";
 
 const Login = () => {
-  const { user, logInWithEmail, navigate } = useContext(AuthContext);
+  const { logInWithEmail, navigate, path } = useContext(AuthContext);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -12,9 +12,8 @@ const Login = () => {
     const password = e.target.password.value;
     logInWithEmail(email, password);
     e.target.reset();
+    path && navigate(path);
   };
-
-  user && navigate("/");
 
   return (
     <div className="min-h-screen flex flex-col gap-8 pb-8 bg-base-300">

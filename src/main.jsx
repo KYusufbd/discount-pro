@@ -11,6 +11,7 @@ import About from "./components/About.jsx";
 import Coupon from "./components/Coupon.jsx";
 import Error from "./components/Error.jsx";
 import Register from "./components/Register.jsx";
+import PrivateRoute from "./components/PrivateRoute.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -19,15 +20,31 @@ createRoot(document.getElementById("root")).render(
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
           <Route path="/brands" element={<Brands />} />
-          <Route path="/profile" element={<Profile />} />
+
+          <Route
+            path="/profile"
+            element={
+              <PrivateRoute>
+                <Profile />
+              </PrivateRoute>
+            }
+          />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/brand/:id" element={<Coupon />} />
+
+          <Route
+            path="/brand/:id"
+            element={
+              <PrivateRoute>
+                <Coupon />
+              </PrivateRoute>
+            }
+          />
           <Route path="/category/:category" element={<Brands />} />
         </Route>
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
-  </StrictMode>,
+  </StrictMode>
 );

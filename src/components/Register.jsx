@@ -1,14 +1,12 @@
 import { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router";
+import { Link } from "react-router";
 import AuthContext from "../contexts/AuthContext";
 import LoginWithGoogle from "./LoginWithGoogle";
 import { isStrongPassword } from "validator";
 
 const Register = () => {
-  const { user, createUser } = useContext(AuthContext);
+  const { createUser } = useContext(AuthContext);
   const [warning, setWarning] = useState(false);
-
-  const navigate = useNavigate();
 
   const isPasswordValid = (pass) => {
     return isStrongPassword(pass, {
@@ -31,8 +29,6 @@ const Register = () => {
       setWarning(true);
     }
   };
-
-  user && navigate("/");
 
   return (
     <div className="min-h-screen flex flex-col gap-8 bg-base-300">
