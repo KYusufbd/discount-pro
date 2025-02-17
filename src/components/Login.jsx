@@ -49,9 +49,9 @@ const Login = () => {
                 required
                 className=""
               />
-              <button onClick={passwordToggle}>
+              <i onClick={passwordToggle}>
                 {showPass ? <BiHide /> : <BiShow />}
-              </button>
+              </i>
             </div>
             <button className="text-secondary text-start">
               Forgot pasword?

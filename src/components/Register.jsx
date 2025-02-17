@@ -73,9 +73,9 @@ const Register = () => {
                 required
                 className=""
               />
-              <button onClick={passwordToggle}>
+              <i onClick={passwordToggle}>
                 {showPass ? <BiHide /> : <BiShow />}
-              </button>
+              </i>
             </div>
             <p className={`text-warning ${warning || "hidden"}`}>
               Warning: Password must be at least 6 characters long and include

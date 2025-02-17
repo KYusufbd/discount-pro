@@ -17,6 +17,7 @@ import { toast } from "react-toastify";
 const AuthProvider = ({ children }) => {
   // Crate user With Email and password:
   const createUser = (email, password) => {
+    setLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
         console.log(result.user);
@@ -33,16 +34,19 @@ const AuthProvider = ({ children }) => {
 
   const [user, setUser] = useState(null);
   const [path, setPath] = useState(null);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
+      setLoading(false);
       return unsubscribe();
     });
   }, []);
 
   const logInWithEmail = (email, password) => {
+    setLoading(true);
     signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
         console.log(result.user);
@@ -59,6 +63,7 @@ const AuthProvider = ({ children }) => {
   const provider = new GoogleAuthProvider();
 
   const logInWithGoogle = () => {
+    setLoading(true);
     signInWithPopup(auth, provider)
       .then((result) => {
         // This gives you a Google Access Token. You can use it to access the Google API.
@@ -109,6 +114,7 @@ const AuthProvider = ({ children }) => {
     logOut,
     setPath,
     navigate,
+    loading,
   };
 
   return (
