@@ -21,7 +21,7 @@ const AuthProvider = ({ children }) => {
       .then((result) => {
         console.log(result.user);
         setUser(result.user);
-        path ? navigate(path) : navigate('/');
+        path ? navigate(path) : navigate("/");
         setPath(null);
         toast("Account created successfully!");
       })
@@ -47,7 +47,7 @@ const AuthProvider = ({ children }) => {
       .then((result) => {
         console.log(result.user);
         setUser(result.user);
-        path ? navigate(path) : navigate('/');
+        path ? navigate(path) : navigate("/");
         setPath(null);
       })
       .catch((error) => {
@@ -69,7 +69,7 @@ const AuthProvider = ({ children }) => {
         // IdP data available using getAdditionalUserInfo(result)
         const moreInfo = getAdditionalUserInfo(result);
         console.log({ token, user, moreInfo });
-        path ? navigate(path) : navigate('/');
+        path ? navigate(path) : navigate("/");
         setUser(loggedInUser);
         setPath(null);
       })

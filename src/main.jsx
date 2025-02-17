@@ -46,5 +46,5 @@ createRoot(document.getElementById("root")).render(
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
-  </StrictMode>
+  </StrictMode>,
 );
