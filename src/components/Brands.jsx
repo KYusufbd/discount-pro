@@ -3,9 +3,11 @@ import CouponContext from "../contexts/CouponContext";
 import StarRatings from "react-star-ratings";
 import { motion } from "framer-motion";
 import { Link, useParams } from "react-router";
+import AuthContext from "../contexts/AuthContext";
 
 const Brands = () => {
   const { coupons, brands } = useContext(CouponContext);
+  const { user, setPath } = useContext(AuthContext);
   const [brandsToDisplay, setBrandsToDisplay] = useState([]);
   const category = useParams().category;
 
@@ -58,15 +60,15 @@ const Brands = () => {
               key={`brand${brand._id}`}
               className="bg-base-100 card grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 p-4 gap-4"
             >
-              <div className="col-span-1 flex flex-col justify-center items-center py-4">
-                <h1 className="text-2xl font-semibold">{brand.brand_name}</h1>
+              <div className="col-span-1 flex flex-col gap-3 items-center justify-center py-4">
                 <div className="h-28 w-40 flex justify-center items-center">
                   <img
                     src={brand.brand_logo_URL}
                     alt="brand-logo"
-                    className="max-h-full w-full m-auto"
+                    className="max-h-full w-full my-auto"
                   />
                 </div>
+                <h1 className="text-2xl font-semibold">{brand.brand_name}</h1>
                 <div className="flex flex-row items-center gap-2 flex-wrap">
                   <StarRatings
                     rating={brand.rating}
@@ -91,6 +93,9 @@ const Brands = () => {
                 <Link
                   to={`/brand/${brand._id}`}
                   className="btn btn-primary text-lg font-semibold"
+                  onClick={() => {
+                    user || setPath(`/brand/${brand._id}`);
+                  }}
                 >
                   View Coupons
                 </Link>

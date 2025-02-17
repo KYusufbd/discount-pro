@@ -11,9 +11,11 @@ import {
 import auth from "./firebaseAuth";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import { toast } from "react-toastify";
 
 // eslint-disable-next-line react/prop-types
 const AuthProvider = ({ children }) => {
+  // Crate user With Email and password:
   const createUser = (email, password) => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
@@ -21,8 +23,10 @@ const AuthProvider = ({ children }) => {
         setUser(result.user);
         path && navigate({ path });
         setPath(null);
+        toast("Account created successfully!");
       })
       .catch((error) => {
+        toast(error.message);
         console.log(error.message);
       });
   };
@@ -47,6 +51,7 @@ const AuthProvider = ({ children }) => {
         setPath(null);
       })
       .catch((error) => {
+        toast(error.code, error.message);
         console.log(error.message);
       });
   };
@@ -76,12 +81,13 @@ const AuthProvider = ({ children }) => {
         const email = error.customData.email;
         // The AuthCredential type that was used.
         const credential = GoogleAuthProvider.credentialFromError(error);
-        console.log(`
-          Error code: ${errorCode},
-          Error message: ${errorMessage},
-          Email: ${email},
-          Credential: ${credential}
-      `);
+        toast(errorMessage);
+        console.log({
+          "error-code": errorCode,
+          "error-message": errorMessage,
+          email: email,
+          Credential: credential,
+        });
       });
   };
 
@@ -100,9 +106,9 @@ const AuthProvider = ({ children }) => {
     logInWithEmail,
     logInWithGoogle,
     logOut,
-    path,
     setPath,
   };
+
   return (
     <AuthContext.Provider value={autInfo}>{children}</AuthContext.Provider>
   );

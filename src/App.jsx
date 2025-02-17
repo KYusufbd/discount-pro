@@ -4,6 +4,7 @@ import { Outlet, useLocation } from "react-router";
 import Footer from "./components/Footer";
 import CouponContext from "./contexts/CouponContext";
 import AuthProvider from "./firebase/AuthProvider";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -43,6 +44,7 @@ function App() {
           <Navbar switchTheme={switchTheme} theme={theme} />
           <Outlet />
           <Footer />
+          <ToastContainer />
         </div>
       </AuthProvider>
     </CouponContext.Provider>

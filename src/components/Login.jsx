@@ -4,7 +4,7 @@ import AuthContext from "../contexts/AuthContext";
 import LoginWithGoogle from "./LoginWithGoogle";
 
 const Login = () => {
-  const { user, logInWithEmail, path, setPath } = useContext(AuthContext);
+  const { user, logInWithEmail } = useContext(AuthContext);
 
   const navigate = useNavigate();
 
@@ -33,12 +33,14 @@ const Login = () => {
               name="email"
               type="email"
               placeholder="Email"
+              required
               className="input input-md"
             />
             <input
               name="password"
               type="password"
               placeholder="Password"
+              required
               className="input input-md"
             />
             <button className="text-secondary text-start">
