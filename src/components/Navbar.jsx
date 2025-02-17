@@ -6,7 +6,6 @@ import AuthContext from "../contexts/AuthContext";
 
 const Navbar = ({ switchTheme, theme }) => {
   const { user, logOut } = useContext(AuthContext);
-  console.log(user);
   const navMenu = (
     <>
       <li>

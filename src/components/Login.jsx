@@ -1,12 +1,10 @@
 import { useContext } from "react";
-import { Link, useNavigate } from "react-router";
+import { Link } from "react-router";
 import AuthContext from "../contexts/AuthContext";
 import LoginWithGoogle from "./LoginWithGoogle";
 
 const Login = () => {
-  const { user, logInWithEmail } = useContext(AuthContext);
-
-  const navigate = useNavigate();
+  const { user, logInWithEmail, navigate } = useContext(AuthContext);
 
   const handleLogin = (e) => {
     e.preventDefault();

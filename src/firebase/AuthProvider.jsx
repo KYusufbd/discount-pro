@@ -91,10 +91,11 @@ const AuthProvider = ({ children }) => {
       });
   };
 
+  // Log out function:
   const logOut = () => {
     signOut(auth)
       .then(() => {
-        console.log("Logged out successfully!");
+        toast("Logged out successfully!");
         setUser(null);
       })
       .catch((error) => console.log(error.message));
@@ -107,6 +108,7 @@ const AuthProvider = ({ children }) => {
     logInWithGoogle,
     logOut,
     setPath,
+    navigate,
   };
 
   return (

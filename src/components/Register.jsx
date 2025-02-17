@@ -1,12 +1,12 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import AuthContext from "../contexts/AuthContext";
 import LoginWithGoogle from "./LoginWithGoogle";
 import { isStrongPassword } from "validator";
-import { toast } from "react-toastify";
 
 const Register = () => {
   const { user, createUser } = useContext(AuthContext);
+  const [warning, setWarning] = useState(false);
 
   const navigate = useNavigate();
 
@@ -27,7 +27,9 @@ const Register = () => {
     if (isPasswordValid(password)) {
       createUser(email, password);
       e.target.reset();
-    } else toast("Invalid password!");
+    } else {
+      setWarning(true);
+    }
   };
 
   user && navigate("/");
@@ -66,9 +68,9 @@ const Register = () => {
               placeholder="Password"
               className="input input-md"
             />
-            <p className="text-warning">
-              Password must be at least 6 characters long and include at least
-              one uppercase and one lowercase letter.
+            <p className={`text-warning ${warning || "hidden"}`}>
+              Warning: Password must be at least 6 characters long and include
+              at least one uppercase and one lowercase letter.
             </p>
             <div className="card-actions justify-end">
               <button className="btn btn-primary text-lg w-full">
