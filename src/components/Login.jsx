@@ -1,10 +1,13 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router";
 import AuthContext from "../contexts/AuthContext";
 import LoginWithGoogle from "./LoginWithGoogle";
+import { BiShow } from "react-icons/bi";
+import { BiHide } from "react-icons/bi";
 
 const Login = () => {
   const { logInWithEmail, navigate, path } = useContext(AuthContext);
+  const [showPass, setShowPass] = useState(false);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -13,6 +16,11 @@ const Login = () => {
     logInWithEmail(email, password);
     e.target.reset();
     path && navigate(path);
+  };
+
+  const passwordToggle = (e) => {
+    e.preventDefault();
+    setShowPass(!showPass);
   };
 
   return (
@@ -33,13 +41,18 @@ const Login = () => {
               required
               className="input input-md"
             />
-            <input
-              name="password"
-              type="password"
-              placeholder="Password"
-              required
-              className="input input-md"
-            />
+            <div className="flex flex-row input input-md">
+              <input
+                name="password"
+                type={showPass ? "text" : "password"}
+                placeholder="Password"
+                required
+                className=""
+              />
+              <button onClick={passwordToggle}>
+                {showPass ? <BiHide /> : <BiShow />}
+              </button>
+            </div>
             <button className="text-secondary text-start">
               Forgot pasword?
             </button>

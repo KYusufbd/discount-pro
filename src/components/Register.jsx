@@ -3,10 +3,12 @@ import { Link } from "react-router";
 import AuthContext from "../contexts/AuthContext";
 import LoginWithGoogle from "./LoginWithGoogle";
 import { isStrongPassword } from "validator";
+import { BiHide, BiShow } from "react-icons/bi";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
   const [warning, setWarning] = useState(false);
+  const [showPass, setShowPass] = useState(false);
 
   const isPasswordValid = (pass) => {
     return isStrongPassword(pass, {
@@ -28,6 +30,11 @@ const Register = () => {
     } else {
       setWarning(true);
     }
+  };
+
+  const passwordToggle = (e) => {
+    e.preventDefault();
+    setShowPass(!showPass);
   };
 
   return (
@@ -58,12 +65,18 @@ const Register = () => {
               placeholder="Email"
               className="input input-md"
             />
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              className="input input-md"
-            />
+            <div className="flex flex-row input input-md">
+              <input
+                name="password"
+                type={showPass ? "text" : "password"}
+                placeholder="Password"
+                required
+                className=""
+              />
+              <button onClick={passwordToggle}>
+                {showPass ? <BiHide /> : <BiShow />}
+              </button>
+            </div>
             <p className={`text-warning ${warning || "hidden"}`}>
               Warning: Password must be at least 6 characters long and include
               at least one uppercase and one lowercase letter.
