@@ -5,7 +5,8 @@ import { Link, NavLink } from "react-router";
 import AuthContext from "../contexts/AuthContext";
 
 const Navbar = ({ switchTheme, theme }) => {
-  const { logOut } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
+  console.log(user);
   const navMenu = (
     <>
       <li>
@@ -14,11 +15,13 @@ const Navbar = ({ switchTheme, theme }) => {
       <li>
         <NavLink to="/brands">Brands</NavLink>
       </li>
+      {user && (
+        <li>
+          <NavLink to="/profile">My Profile</NavLink>
+        </li>
+      )}
       <li>
-        <NavLink to="/profile">My Profile</NavLink>
-      </li>
-      <li>
-        <NavLink to="/about">About Dev</NavLink>
+        <NavLink to="/about">About</NavLink>
       </li>
     </>
   );
@@ -49,9 +52,25 @@ const Navbar = ({ switchTheme, theme }) => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               {navMenu}
-              <Link to="/login" className="md:hidden btn btn-secondary text-lg">
-                Log In
-              </Link>
+              {user ? (
+                <li>
+                  <button
+                    onClick={logOut}
+                    className="btn btn-secondary text-lg flex md:hidden"
+                  >
+                    Log Out
+                  </button>
+                </li>
+              ) : (
+                <li>
+                  <Link
+                    to="/login"
+                    className="btn btn-secondary text-lg flex md:hidden"
+                  >
+                    Log In
+                  </Link>
+                </li>
+              )}
             </ul>
           </div>
           <Link to="/" className="text-2xl font-bold text-primary">
@@ -64,20 +83,34 @@ const Navbar = ({ switchTheme, theme }) => {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link
-            to="/login"
-            className="btn btn-secondary text-lg hidden md:flex"
-          >
-            Log In
-          </Link>
+          {user ? (
+            <>
+              <div className="flex flex-row flex-wrap items-center px-2 gap-2 mt-auto">
+                <div className="h-6 md:h-9 max-w-9 ml-auto rounded-full overflow-hidden">
+                  {user.photoURL && (
+                    <img className="h-full" src={user?.photoURL} alt="user" />
+                  )}
+                </div>
+                <p className="text-base text-accent ml-auto">{user.email}</p>
+              </div>
+              <button
+                onClick={logOut}
+                className="btn btn-secondary text-lg hidden md:flex"
+              >
+                Log Out
+              </button>
+            </>
+          ) : (
+            <Link
+              to="/login"
+              className="btn btn-secondary text-lg hidden md:flex"
+            >
+              Log In
+            </Link>
+          )}
+
           <button
-            onClick={logOut}
-            className="btn btn-secondary text-lg hidden md:flex"
-          >
-            Log Out
-          </button>
-          <button
-            className="btn bg-transparent border-0 rounded-full text-3xl"
+            className="btn bg-transparent border-0 rounded-full text-xl hidden md:flex"
             onClick={() => switchTheme()}
           >
             {theme === "light" ? <CiDark /> : <CiLight />}

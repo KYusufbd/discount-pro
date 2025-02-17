@@ -3,37 +3,106 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
+  GoogleAuthProvider,
+  signInWithPopup,
+  getAdditionalUserInfo,
+  onAuthStateChanged,
 } from "firebase/auth";
 import auth from "./firebaseAuth";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 
 // eslint-disable-next-line react/prop-types
 const AuthProvider = ({ children }) => {
   const createUser = (email, password) => {
     createUserWithEmailAndPassword(auth, email, password)
-    .then((result) => {
-      console.log(result.user);
-    }).catch(error => {
-      console.log(error.message);
-    })
+      .then((result) => {
+        console.log(result.user);
+        setUser(result.user);
+        path && navigate({ path });
+        setPath(null);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
   };
 
-  const logInWithEmail = async (email, password) => {
-    await signInWithEmailAndPassword(auth, email, password)
-    .then((result) => {
-      console.log(result.user);
-    })
-    .catch(error => {
-      console.log(error.message);
-    })
+  const [user, setUser] = useState(null);
+  const [path, setPath] = useState(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      return unsubscribe();
+    });
+  }, []);
+
+  const logInWithEmail = (email, password) => {
+    signInWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        console.log(result.user);
+        setUser(result.user);
+        path && navigate({ path });
+        setPath(null);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
+  const provider = new GoogleAuthProvider();
+
+  const logInWithGoogle = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+        // The signed-in user info.
+        const loggedInUser = result.user;
+        // IdP data available using getAdditionalUserInfo(result)
+        const moreInfo = getAdditionalUserInfo(result);
+        console.log({ token, user, moreInfo });
+        setUser(loggedInUser);
+        path && navigate({ path });
+        setPath(null);
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.customData.email;
+        // The AuthCredential type that was used.
+        const credential = GoogleAuthProvider.credentialFromError(error);
+        console.log(`
+          Error code: ${errorCode},
+          Error message: ${errorMessage},
+          Email: ${email},
+          Credential: ${credential}
+      `);
+      });
   };
 
   const logOut = () => {
-    signOut(auth).then(() => {
-      console.log("Logged out successfully!");
-    }).catch(error => console.log(error));
+    signOut(auth)
+      .then(() => {
+        console.log("Logged out successfully!");
+        setUser(null);
+      })
+      .catch((error) => console.log(error.message));
   };
 
-  const autInfo = { createUser, logInWithEmail, logOut };
+  const autInfo = {
+    createUser,
+    user,
+    logInWithEmail,
+    logInWithGoogle,
+    logOut,
+    path,
+    setPath,
+  };
   return (
     <AuthContext.Provider value={autInfo}>{children}</AuthContext.Provider>
   );

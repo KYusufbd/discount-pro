@@ -1,9 +1,12 @@
 import { useContext } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import AuthContext from "../contexts/AuthContext";
+import LoginWithGoogle from "./LoginWithGoogle";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { user, createUser } = useContext(AuthContext);
+
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -11,8 +14,12 @@ const Register = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(name, email, password);
-    createUser(email, password)
+    createUser(email, password);
+    e.target.reset();
   };
+
+  user && navigate("/");
+
   return (
     <div className="min-h-screen flex flex-col gap-8 bg-base-300">
       <div className="w-full bg-primary text-primary-content py-4">
@@ -57,6 +64,7 @@ const Register = () => {
               </p>
             </div>
           </form>
+          <LoginWithGoogle />
         </div>
       </div>
     </div>

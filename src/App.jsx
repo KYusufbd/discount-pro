@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router";
 import Footer from "./components/Footer";
 import CouponContext from "./contexts/CouponContext";
+import AuthProvider from "./firebase/AuthProvider";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -29,13 +30,21 @@ function App() {
     setBrands(b);
   }, [coupons]);
 
+  // This code is to scroll to top when the route is changed.
+  const location = useLocation();
+  useEffect(() => {
+    scrollTo(0, 0);
+  }, [location]);
+
   return (
     <CouponContext.Provider value={{ coupons, brands }}>
-      <div data-theme={theme} className="w-full text-base-content box-border">
-        <Navbar switchTheme={switchTheme} theme={theme} />
-        <Outlet />
-        <Footer />
-      </div>
+      <AuthProvider>
+        <div data-theme={theme} className="w-full text-base-content box-border">
+          <Navbar switchTheme={switchTheme} theme={theme} />
+          <Outlet />
+          <Footer />
+        </div>
+      </AuthProvider>
     </CouponContext.Provider>
   );
 }

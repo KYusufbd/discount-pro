@@ -1,19 +1,25 @@
 import { useContext } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import AuthContext from "../contexts/AuthContext";
+import LoginWithGoogle from "./LoginWithGoogle";
 
 const Login = () => {
-  const { logInWithEmail } = useContext(AuthContext);
+  const { user, logInWithEmail, path, setPath } = useContext(AuthContext);
+
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    logInWithEmail(email, password)
+    logInWithEmail(email, password);
+    e.target.reset();
   };
 
+  user && navigate("/");
+
   return (
-    <div className="min-h-screen flex flex-col gap-8 bg-base-300">
+    <div className="min-h-screen flex flex-col gap-8 pb-8 bg-base-300">
       <div className="w-full bg-primary text-primary-content py-4">
         <div className="section flex flex-row justify-between">
           <h1 className="text-start font-bold text-3xl">Log In</h1>
@@ -48,14 +54,7 @@ const Login = () => {
               </p>
             </div>
           </form>
-          <div className="flex flex-col gap-2">
-            <p className="text-center text-lg font-medium">Or</p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-accent text-lg w-full">
-                Log In With Google
-              </button>
-            </div>
-          </div>
+          <LoginWithGoogle />
         </div>
       </div>
     </div>
