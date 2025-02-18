@@ -72,7 +72,7 @@ const Navbar = ({ switchTheme, theme }) => {
               )}
             </ul>
           </div>
-          <Link to="/" className="text-2xl font-bold text-primary">
+          <Link to="/" className="text-2xl font-bold text-primary z-20">
             Discount Pro
           </Link>
         </div>
@@ -81,10 +81,10 @@ const Navbar = ({ switchTheme, theme }) => {
             {navMenu}
           </ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end flex flex-row gap-2">
           {user ? (
             <>
-              <div className="flex flex-row flex-wrap items-center px-2 gap-2 mt-auto">
+              <div className="sm:bg-base-200 rounded-lg p-1 flex flex-row flex-wrap items-center px-2 gap-1 mt-auto">
                 <div className="h-6 md:h-9 max-w-9 ml-auto rounded-full overflow-hidden">
                   {user.photoURL && (
                     <img className="h-full" src={user?.photoURL} alt="user" />

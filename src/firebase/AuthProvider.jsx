@@ -5,8 +5,9 @@ import {
   signOut,
   GoogleAuthProvider,
   signInWithPopup,
-  getAdditionalUserInfo,
   onAuthStateChanged,
+  updateProfile,
+  sendPasswordResetEmail,
 } from "firebase/auth";
 import auth from "./firebaseAuth";
 import { useEffect, useState } from "react";
@@ -62,18 +63,13 @@ const AuthProvider = ({ children }) => {
 
   const provider = new GoogleAuthProvider();
 
+  // Login with Google:
   const logInWithGoogle = () => {
     setLoading(true);
     signInWithPopup(auth, provider)
       .then((result) => {
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
         // The signed-in user info.
         const loggedInUser = result.user;
-        // IdP data available using getAdditionalUserInfo(result)
-        const moreInfo = getAdditionalUserInfo(result);
-        console.log({ token, user, moreInfo });
         path ? navigate(path) : navigate("/");
         setUser(loggedInUser);
         setPath(null);
@@ -96,6 +92,21 @@ const AuthProvider = ({ children }) => {
       });
   };
 
+  // Update profile:
+  const updetProf = (newName, newImg) => {
+    updateProfile(auth.currentUser, {
+      displayName: newName,
+      photoURL: newImg,
+    })
+      .then(() => {
+        toast("Profile Updated!");
+      })
+      .catch((error) => {
+        // An error occurred
+        console.log(error.message);
+      });
+  };
+
   // Log out function:
   const logOut = () => {
     signOut(auth)
@@ -106,11 +117,29 @@ const AuthProvider = ({ children }) => {
       .catch((error) => console.log(error.message));
   };
 
+  // Password reset function:
+  const resetPassword = (email) => {
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        // Password reset email sent!
+        toast("Password reset email sent!");
+        navigate("/login");
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+      });
+  };
+
+  // Auth context value:
   const autInfo = {
     createUser,
     user,
     logInWithEmail,
     logInWithGoogle,
+    updetProf,
+    resetPassword,
     logOut,
     setPath,
     navigate,
