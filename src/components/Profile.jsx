@@ -16,29 +16,33 @@ const Profile = () => {
           <h1 className="text-start font-bold text-3xl">User Profile</h1>
         </div>
       </div>
-      <div className="section hero bg-base-200 py-8">
-        <div className="hero-content flex-col lg:flex-row-reverse gap-12">
-          <div className="w-40 h-40 rounded-full overflow-hidden shadow-2xl">
-            <img src={image ? image : "/user.png"} className="h-full mx-auto" />
-          </div>
+      <div className="section hero bg-accent pt-8 pb-34">
+        <div className="hero-content flex-col lg:flex-row-reverse gap-8">
           <div>
-            <h1 className="text-2xl text-secondary font-semibold">
+            <h1 className="text-3xl text-secondary font-semibold">
               Welcome{name && `, ${name}`}!
             </h1>
-            <p className="py-6 text-base-content opacity-75 text-lg">
+            <p className="py-6 text-accent-content text-lg">
               Manage your profile, update your information, and customize your
               experience.
             </p>
           </div>
         </div>
       </div>
-      <div className="card w-96 max-w-full bg-base-100 card-xl shadow-sm mx-auto my-6">
-        <div className="card-body">
-          <h2 className="card-title">{name}</h2>
-          <p>Email: {email}</p>
-          <p>Joined: {moment(user.createdAt).format("DD MMM YYYY, hh:mm A")}</p>
-          <div className="justify-end card-actions">
-            <button className="btn btn-ghost">Edit Profile</button>
+      <div className="card w-96 max-w-full bg-primary-content text-primary card-xl shadow-sm mx-auto -mt-34">
+        <div className="card-body flex flex-col gap-8">
+          <div className="w-40 h-40 rounded-full overflow-hidden shadow-2xl mx-auto">
+            <img src={image ? image : "/user.png"} className="h-full mx-auto" />
+          </div>
+          <div>
+            <h2 className="card-title">{name}</h2>
+            <p>Email: {email}</p>
+            <p>
+              Joined: {moment(user.createdAt).format("DD MMM YYYY, hh:mm A")}
+            </p>
+            <div className="justify-end card-actions">
+              <button className="btn btn-ghost">Edit Profile</button>
+            </div>
           </div>
         </div>
       </div>
