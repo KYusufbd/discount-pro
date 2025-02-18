@@ -68,21 +68,32 @@ firebase deploy
 ## 🏗️ Folder Structure
 ```
 📦 discount-pro
+├── 📂 firebase             # Firebase configuration files
+├── 📂 dist                 # Build directory (after running `npm run build`)
+├── 📂 node_modules         # Project dependencies
+├── 📂 public               # Static files
 ├── 📂 src
-│   ├── 📂 components       # Reusable React components
-│   ├── 📂 pages            # Individual pages (Home, About, Profile, etc.)
 │   ├── 📂 assets           # Images & icons
+│   ├── 📂 components       # Reusable React components
+│   ├── 📂 contexts         # Context API for global state management
+│   │   ├── AuthContext.js  # Authentication context
+│   │   ├── CouponContext.js # Coupons context
+│   ├── 📂 firebase         # Firebase configuration
+│   │   ├── AuthProvider.jsx # Authentication provider
+│   │   ├── firebaseAuth.js # Firebase auth functions
 │   ├── 📂 hooks            # Custom React hooks
-│   ├── 📂 context          # Context API for global state management
 │   ├── 📂 utils            # Helper functions & utility files
 │   ├── App.jsx            # Main React component
-│   ├── main.jsx           # Entry point for React
 │   ├── index.css          # Global styles
-├── 📂 public               # Static files
+│   ├── main.jsx           # Entry point for React
 ├── .env                    # Environment variables
+├── .firebaserc             # Firebase project config
+├── .gitignore              # Git ignored files
+├── eslint.config.js        # ESLint configuration
+├── firebase.json           # Firebase hosting config
+├── index.html              # Main HTML template
 ├── package.json            # Project dependencies & scripts
 ├── vite.config.js          # Vite configuration
-├── firebase.json           # Firebase hosting config
 └── README.md               # Project documentation
 ```
 
