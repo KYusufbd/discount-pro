@@ -113,6 +113,7 @@ const AuthProvider = ({ children }) => {
       .then(() => {
         toast("Logged out successfully!");
         setUser(null);
+        navigate('/')
       })
       .catch((error) => console.log(error.message));
   };
